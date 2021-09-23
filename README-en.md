@@ -15,6 +15,11 @@ Introducing **Pi-Apps**, basically a list of pre-made apps you can install with 
 ```
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
 ```
+Meine Version, funktioniert super auf Debian Bullseye
+```
+wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
+```
+
 <details>
 <summary>Manual installation</summary>
 
