@@ -1,28 +1,39 @@
 ![logo](https://github.com/Botspot/pi-apps/blob/master/icons/proglogo.png?raw=true)
-## Raspberry Pi App Store for Open Source Projects
+## Raspberry Pi App Store für Open Source Projekte
 
-Linux is harder to master than Windows. It's geared toward power users, and you will encounter problems if you follow tutorials.
-Because of the lack of available software on the `apt` repositories, most Raspberry Pi owners never use their Pies to their full, desktop PC, potential.  
-Countless **Raspberry Pies remain in disuse** for this very reason. Something must be done!  
-Introducing **Pi-Apps**, basically a list of pre-made apps you can install with **one click**. (What a concept!)
+Linux ist schwieriger zu beherrschen als Microsoft's Windows. Es richtet sich an Power-User, und Sie werden dabei auf Probleme stoßen, wenn Sie beispielsweise Tutorials befolgen. Aufgrund des Mangels an verfügbarer Software in den 'apt'-Repositorys nutzen die meisten Raspberry Pi-Besitzer ihre Pies nie voll aus, um ihren Desktop-PC-Potenzial voll auszuschöpfen. Unzählige **Raspberry bleiben aus diesem Grund ungenutzt**. Etwas muss etwas daran getan werden!
+Wir stellen **Pi-Apps** vor, im Grunde eine Liste vorgefertigter Apps, die Sie mit **einem Klick** installieren können. (Was für ein Konzept!)
+
+Ich habe dies geklont um mir Pi-Apps selbst individuell anzupassen, neu zu ordnen und um weitere andere Apps mit aufzunehmen. Da leider auch in den anderen App-Stores nicht immer das richtige, manchmal veraltet mit dabei ist. 
+Auch mache ich dies, um damit selbst unabhängig zu werden. 
 
 **[ETA Prime](https://www.youtube.com/watch?v=oqNWJ52DLes)** (a very well known RPi YouTuber) says:
 
 > "It's an **awesome** Raspberry Pi app store and it **works really well** and there's *lots* of **great stuff in here** and it's super **easy to install**.  
 > I want to give the devs of Pi-Apps a big shout-out."
 
-## To install Pi-Apps
-```
-wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
-```
+## Installieren von Pi-Apps
+
 Meine Version, funktioniert super auf Debian Bullseye
+```
+wget -qO- https://raw.githubusercontent.com/DWHR-Pi/pi-apps/master/install | bash
+```
+
+Die original Version, funktioniert auch super auf Debian Bullseye
 ```
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
 ```
 
 <details>
-<summary>Manual installation</summary>
+<summary>Manuelle installation</summary>
+	
+Meine Version
+```
+git clone https://github.com/DWHR-Pi/pi-apps
+~/pi-apps/install
+```
 
+Die original Version.
 ```
 git clone https://github.com/Botspot/pi-apps
 ~/pi-apps/install
@@ -41,7 +52,8 @@ To uninstall Pi-Apps:
 </details>
 
 ## To run Pi-Apps
-Menu -> Accessories -> Pi Apps, or run `pi-apps` in a terminal. Run Pi-Apps from its directory with `~/pi-apps/gui`.
+Menu -> Accessories -> Pi Apps, or run `pi-apps` in a terminal. Run Pi-Apps from its directory with `~/pi-apps/gui`. 
+Pi-Apps im Terminal zu starten macht sinn. Da man hier Fehlermeldungen aktiv reportiert bekommt. 
 ### Useful links
 - [![Pi-Apps Discord server](https://img.shields.io/discord/770629697909424159.svg?color=7289da&label=Pi-Apps%20Discord%20server&logo=discord)](https://discord.gg/RXSTvaUvuu)
 - [Send Botspot a donation](https://paypal.me/josephmarchand)
