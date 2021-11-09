@@ -1,0 +1,701 @@
+#!/bin/bash
+
+set -a #export all functions and variables for child processes like runonce()
+
+DIRECTORY="$(readlink -f "$(dirname "$0")")"
+
+function error {
+  echo -e "\e[91m$1\e[39m"
+  exit 1
+}
+
+if ! command -v yad &>/dev/null;then
+  error "YAD needs to be installed to run pi-apps."
+fi
+
+#launch splash screen
+yad --undecorated --title=Pi-Apps --image="${DIRECTORY}/icons/splashscreen.png" --center --no-buttons --skip-taskbar &
+splashpid=$!
+
+#for the text_editor(), runonce() and app_status() functions
+source "${DIRECTORY}/api" || error "failed to source ${DIRECTORY}/api"
+
+generate_logo
+
+(
+#mark wine and box86 as disabled, if twisteros
+runonce <<"EOF"
+  if [ -f /usr/local/bin/twistver ] && command -v wine >/dev/null ;then
+    echo 'disabled' > "${DIRECTORY}/data/status/Wine (x86)"
+  fi
+  if [ -f /usr/local/bin/twistver ] && command -v box86 >/dev/null ;then
+    echo 'disabled' > "${DIRECTORY}/data/status/Box86"
+  fi
+EOF
+
+#re-run install script on twistos lite to re-show some previously hidden apps
+runonce <<"EOF"
+if [ -f /usr/local/bin/twistver ] && [[ "$(twistver)" != 'Twister OS version'* ]];then
+  "${DIRECTORY}/install"
+fi
+EOF
+
+#remove old apps and migrate chromium downgrading apps to the new "Chromium Downgrade" app
+runonce <<"EOF"
+  #rework chromium downgrading apps to one single new app: 'Downgrade Chromium'
+  rm -rf "${DIRECTORY}/apps/Back to Chromium v86"
+  rm -rf "${DIRECTORY}/apps/Back to Chromium v78"
+  if [ "$(cat "${DIRECTORY}/data/status/Back to Chromium v78" 2>/dev/null)" == installed ] || [ "$(cat "${DIRECTORY}/data/status/Back to Chromium v86" 2>/dev/null)" == installed ];then
+    echo "installed" > "${DIRECTORY}/data/status/Downgrade Chromium"
+  fi
+  
+  rm -rf "${DIRECTORY}/apps/FreeCAD (precompiled)"
+  rm -rf "${DIRECTORY}/apps/Chromium Media Edition"
+  rm -rf "${DIRECTORY}/apps/Cordless"
+  rm -rf "${DIRECTORY}/apps/Retropie"
+  
+  #rename 'Turbo Scratch' app to 'Turbowarp'
+  rm -rf "${DIRECTORY}/apps/Turbo Scratch"
+  mv -f "${DIRECTORY}/data/status/Turbo Scratch" "${DIRECTORY}/data/status/Turbowarp" 2>/dev/null
+  
+  #rename 'Pi-Apps Terminal Plugin' app to 'Pi-Apps Terminal Plugin (python)'
+  rm -rf "${DIRECTORY}/apps/Pi-Apps Terminal Plugin"
+  mv -f "${DIRECTORY}/data/status/Pi-Apps Terminal Plugin" "${DIRECTORY}/data/status/Pi-Apps Terminal Plugin (python)" 2>/dev/null
+  
+  #rename 'Whatsapp' app to 'WhatsApp'
+  rm -rf "${DIRECTORY}/apps/Whatsapp"
+  mv -f "${DIRECTORY}/data/status/Whatsapp" "${DIRECTORY}/data/status/WhatsApp" 2>/dev/null
+  
+  #rename 'Sonic Pi 3.2' to 'Sonic Pi'
+  rm -rf "${DIRECTORY}/apps/Sonic Pi 3.2"
+  mv -f "${DIRECTORY}/data/status/Sonic Pi 3.2" "${DIRECTORY}/data/status/Sonic Pi" 2>/dev/null
+  
+  
+  #rename 'Min Browser' to 'Min'
+  rm -rf "${DIRECTORY}/apps/Min Browser"
+  mv -f "${DIRECTORY}/data/status/Min Browser" "${DIRECTORY}/data/status/Min" 2>/dev/null
+  
+  #rename 'Pale Moon Browser' to 'Pale Moon'
+  rm -rf "${DIRECTORY}/apps/Pale Moon Browser"
+  mv -f "${DIRECTORY}/data/status/Pale Moon Browser" "${DIRECTORY}/data/status/Pale Moon" 2>/dev/null
+  
+  #rename 'Puffin Browser Demo' to 'Puffin'
+  rm -rf "${DIRECTORY}/apps/Puffin Browser Demo"
+  mv -f "${DIRECTORY}/data/status/Puffin Browser Demo" "${DIRECTORY}/data/status/Puffin" 2>/dev/null
+  
+  #rename 'Quartz Browser' to 'Quartz'
+  rm -rf "${DIRECTORY}/apps/Quartz Browser"
+  mv -f "${DIRECTORY}/data/status/Quartz Browser" "${DIRECTORY}/data/status/Quartz" 2>/dev/null
+  
+  #rename 'Tor Browser' to 'Tor'
+  rm -rf "${DIRECTORY}/apps/Tor Browser"
+  mv -f "${DIRECTORY}/data/status/Tor Browser" "${DIRECTORY}/data/status/Tor" 2>/dev/null
+  
+  true
+EOF
+
+#rename xlunch setting to xlunch-dark
+runonce <<"EOF"
+  if [ "$(cat "${DIRECTORY}/data/settings/App List Style")" == xlunch ];then
+    echo 'xlunch-dark' > "${DIRECTORY}/data/settings/App List Style"
+  fi
+EOF
+
+#for old installs prior to having categories, re-run install script
+runonce <<"EOF"
+  if [ ! -e "${DIRECTORY}/data/categories" ];then
+    "${DIRECTORY}/install"
+  fi
+EOF
+
+#ensure curl is installed
+runonce <<"EOF"
+  if ! command -v curl >/dev/null ;then
+    sudo apt install -y curl
+  fi
+EOF
+
+#install aria2c for faster downloading
+runonce <<"EOF"
+  if ! command -v aria2c >/dev/null ;then
+    sudo apt install -y aria2
+  fi
+EOF
+
+#ensure lsb-release is installed
+runonce <<"EOF"
+  if ! command -v lsb_release >/dev/null ;then
+    sudo apt install -y lsb-release
+  fi
+EOF
+
+#transition from box86-no-binfmt-restart package to box86
+runonce <<"EOF"
+  if dpkg -l box86-no-binfmt-restart &>/dev/null ;then
+    sudo dpkg --remove box86-no-binfmt-restart pi-apps-5f3374a7 && sudo apt update && sudo apt install box86 -y
+  fi
+  
+  #if box86 is supposedly installed, but box86 command not found, reinstall box86
+  if [ "$(app_status Box86)" == 'installed' ] && ! command -v box86 >/dev/null;then
+    rm -f "${DIRECTORY}/data/status/Box86"
+    "${DIRECTORY}/manage" uninstall Box86
+    "${DIRECTORY}/manage" install Box86
+  fi
+  true
+EOF
+
+#remove files from pi-apps folder that are no longer used
+runonce <<"EOF"
+  rm -f "${DIRECTORY}/etc/bitlylink"
+  rm -rf "${DIRECTORY}/data/categories"
+EOF
+
+) &
+
+#check for updates in background
+"${DIRECTORY}/updater" set-status &>/dev/null &
+
+install() {
+  app="$1" #one app name per line
+  
+  #terminal title text
+  linecount="$(echo "$app" | wc -l)"
+  if [ $linecount -eq 1 ];then
+    title="Installing $app"
+  elif [ $linecount -lt 4 ];then
+    title="Installing $(echo -n "$app" | tr '\n' '|' | sed 's/|/, /g')"
+  else
+    title="Installing $linecount apps"
+  fi
+  "${DIRECTORY}/etc/terminal-run" '
+    DIRECTORY="'"$DIRECTORY"'"
+    source "${DIRECTORY}/api"
+    generate_logo
+    if "${DIRECTORY}/manage" multi-install "'"$app"'" ;then
+      echo -e "\nClosing in 30 seconds."
+      sleep 30
+    else
+      echo -e "\nClose this window to exit."
+      read enter #technically you could press Enter to exit.
+    fi
+    ' "$title"
+  
+  #re-preload all categories in background
+  "${DIRECTORY}/etc/preload-daemon" "$format" &>/dev/null &
+}
+
+uninstall() {
+  app="$1" #one app name per line
+  
+  #terminal title text
+  linecount="$(echo "$app" | wc -l)"
+  if [ $linecount -eq 1 ];then
+    title="Uninstalling $app"
+  elif [ $linecount -lt 4 ];then
+    title="Uninstalling $(echo -n "$app" | tr '\n' '|' | sed 's/|/, /g')"
+  else
+    title="Uninstalling $linecount apps"
+  fi
+  "${DIRECTORY}/etc/terminal-run" '
+    DIRECTORY="'"$DIRECTORY"'"
+    source "${DIRECTORY}/api"
+    generate_logo
+    if "${DIRECTORY}/manage" multi-uninstall "'"$app"'" ; then
+      echo -e "\nClosing in 30 seconds."
+      sleep 30
+    else
+      echo -e "\nClose this window to exit."
+      read enter #technically you could press Enter to exit.
+    fi
+    ' "$title"
+  
+  #re-preload all categories in background
+  "${DIRECTORY}/etc/preload-daemon" "$format" &>/dev/null &
+}
+
+#Determine message of the day. If announcements file missing or over a day old, download it.
+if [ ! -f "${DIRECTORY}/data/announcements" ] || [ ! -z "$(find "${DIRECTORY}/data/announcements" -mtime +1 -print)" ]; then
+  wget https://raw.githubusercontent.com/Botspot/pi-apps-announcements/main/message -qO "${DIRECTORY}/data/announcements"
+fi
+
+#app list mode. Allowed values: 'yad', 'xlunch'
+guimode="$(cat "${DIRECTORY}/data/settings/App List Style")"
+[ -z "$guimode" ] && guimode=yad-default
+#mode=yad
+
+#Variable 1 is used to view the details of the specified app
+if [ ! -z "$1" ];then
+  app="$1"
+  action='details'
+else
+  action='main-window'
+fi
+prefix=''
+
+while true;do
+  
+  [ ! -z "$prefix" ] && echo "Prefix: $prefix"
+  echo "App: ${app}"
+  echo "Action: $action"
+  echo "Prevaction: $prevaction"
+  
+  #most actions need the app variable to be filled. These don't: main-window, search, exit, back, unknown, view-updates
+  if [ -z "$app" ] && ! echo "$action" | grep -q 'main-window\|search\|exit\|back\|unknown\|view-updates';then
+    action='mind-reading'
+    echo "Action has been changed to 'mind-reading'"
+  fi
+  
+  if [ "$action" == main-window ];then
+    
+    prevaction="$action" #remember the previous action we came from
+    
+    #generate the list for the yad window
+    LIST="$("${DIRECTORY}/preload" $guimode "$prefix" 2>/dev/null)"
+    
+    #now that list has been generated, kill the splash screen
+    (sleep 1; kill "$splashpid" 2>/dev/null) &
+    
+    #retrieve a random line from the announcements file for this session
+    [ -z "$prefix" ] && motd="$(shuf -n 1 "${DIRECTORY}/data/announcements")"
+    
+    if [[ "$guimode" == yad* ]];then 
+      
+      if [ -z "$prefix" ];then
+        buttons=("--button=!${DIRECTORY}/icons/search.png!Search:5" \
+        "--button=!${DIRECTORY}/icons/install.png!Install:4" \
+        "--button=!${DIRECTORY}/icons/uninstall.png!Uninstall:2" \
+        "--button=!${DIRECTORY}/icons/info.png!View more about the selected software:0" )
+      else
+        buttons=("--button=!${DIRECTORY}/icons/back.png!Back:3" \
+        "--button=!${DIRECTORY}/icons/install.png!Install:4" \
+        "--button=!${DIRECTORY}/icons/uninstall.png!Uninstall:2" \
+        "--button=!${DIRECTORY}/icons/info.png!Details:0" )
+      fi
+      
+      app="$(echo -e "$LIST" | yad --center --title='Pi-Apps' --width=310 --height=400 --no-headers \
+        --text="$([ -z "$prefix" ] && echo "$motd" || echo "Viewing $(echo "$prefix" | tr '/' '>') category")" \
+        --image="$([ -f "${DIRECTORY}/icons/categories/$(basename "$prefix")-64.png" ] && echo "${DIRECTORY}/icons/categories/$(basename "$prefix")-64.png" || echo "${DIRECTORY}/icons/logo-64.png")" --image-on-top \
+        --list --multiple --separator='\n' --window-icon="${DIRECTORY}/icons/logo.png" \
+        --column=:IMG --column=:IMG --column=Name --column=Sysname:HD --column=tip:HD \
+        --print-column=4 --tooltip-column=5 \
+        "${buttons[@]}" \
+      )"
+      button=$? #get exit code to determine which button was pressed
+      
+      case $button in
+      1)
+        action=exit
+        ;;
+      252)
+        action=exit
+        ;;
+      3)
+        action=back
+        ;;
+      0)
+        action=details
+        ;;
+      2)
+        action=uninstall
+        ;;
+      4)
+        action=install
+        ;;
+      5)
+        action=search
+        ;;
+      *)
+        action=unknown
+        ;;
+      esac
+
+
+    elif [[ "$guimode" == xlunch* ]];then
+      if [ ! -d "${DIRECTORY}/xlunch" ] || [ ! -f /usr/bin/xlunch ];then
+        #uninstall xlunch first
+        sudo rm -rf /etc/xlunch /usr/share/xlunch /usr/bin/xlunch /usr/bin/genentries /usr/bin/updateentries /usr/bin/genentries.desktop.sh /usr/share/icons/hicolor/48x48/apps/xlunch_ghost.png /usr/share/icons/hicolor/48x48/apps/xlunch.png /usr/share/applications/genentries.desktop
+        
+        #signal files
+        rm -f /tmp/xlunchfailed /tmp/xlunchfinished /tmp/terminalexit
+        echo '' > /tmp/terminalexit
+        "${DIRECTORY}/etc/terminal-run" "
+          function error {
+            echo -e "\""\e[91m$1\e[39m"\""
+            echo 'Close this terminal to exit.'
+            echo '' > /tmp/xlunchfailed
+            sleep infinity
+          }
+          trap 'echo "\"""\"" > /tmp/terminalexit' EXIT
+          rm -f /tmp/terminalexit
+          sudo rm -rf /usr/bin/xlunch "\""$DIRECTORY/xlunch"\"" 2>/dev/null
+          sudo apt install -y libimlib2-dev libx11-dev || error 'APT failed to install libimlib2-dev and libx11-dev packages!'
+          cd "\""$DIRECTORY"\""
+          git clone https://github.com/Tomas-M/xlunch || error 'Failed to clone xlunch repository!'
+          cd "\""$DIRECTORY/xlunch"\""
+          echo 'Running make...'
+          echo "\"""\$"(cat '${DIRECTORY}/xlunch/Makefile' | grep -v 'genentries \|cp -r svgicons/')"\"" > '${DIRECTORY}/xlunch/Makefile'
+          make -j8 || error 'make command failed!'
+          echo 'Running sudo make install...'
+          sudo make install || error 'sudo make install failed!'
+          sudo rm -f /usr/share/applications/genentries.desktop
+          cd $HOME
+          if [ ! -f /usr/bin/xlunch ];then
+            error 'xlunch should be installed now, but /usr/bin/xlunch does not exist!'
+          fi
+          echo '' > /tmp/xlunchfinished
+        " 'Compiling xlunch...'
+        #if terminal doesn't start in 3 seconds, then /tmp/terminalexit will exist.
+        sleep 3
+        #check for an exit status code from the running terminal
+        while true; do
+          if [ -f /tmp/xlunchfinished ];then
+            echo "xlunch finished installing."
+            break
+          elif [ -f /tmp/xlunchfailed ];then
+            #revert back to yad
+            echo 'yad' > "{DIRECTORY}/data/settings/App List Style"
+            error "xlunch failed to compile!"
+          elif [ -f /tmp/terminalexit ];then #if terminal doesn't start in 3 seconds, then /tmp/terminalexit will exist.
+            #revert back to yad
+            echo 'yad' > "{DIRECTORY}/data/settings/App List Style"
+            error "The xlunch compilation terminal exited prematurely."
+          else
+            sleep 1
+          fi
+        done
+      fi
+      #xlunch compiled
+      
+      screen_width="$(xdpyinfo | grep 'dimensions:' | tr 'x' '\n' | tr ' ' '\n' | sed -n 7p)"
+      screen_height="$(xdpyinfo | grep 'dimensions:' | tr 'x' '\n' | tr ' ' '\n' | sed -n 8p)"
+      height=700
+      width=800
+      xposition=$(((screen_width/2)-(width/2)))
+      yposition=$(((screen_height/2)-(height/2)))
+      
+      if false;then
+        scrot -a "$((xposition+1)),$((yposition+33)),${width},${height}" blur.png #blur_init.png
+        convert -blur 10x5 ~/blur.png ~/blur.png
+      fi
+      
+      if [ ! -z "$prefix" ] && ! echo "$LIST" | grep -q 'Back;' ;then
+        echo "Adding back button to xlunch..."
+        LIST="Back;${DIRECTORY}/icons/back-64.png;./
+$LIST"
+        LIST="$(echo "$LIST" | grep .)"
+      fi
+      
+      if [ -z "$prefix" ];then
+        searchbox="Search: "
+      else
+        searchbox="Viewing $(echo "$prefix" | tr '/' '>'). Search: "
+      fi
+      
+      if [ "$guimode" == xlunch-light-3d ];then
+        #light mode
+        app="$(echo -e "$LIST" | xlunch -WoCS -s 64 --bc e0e0e000 --tc 000000 --pc 6060ffff --hc ffffff50 \
+          -p "$searchbox" -a -c $([ $width -lt 550 ] && echo 1 || echo 2) --title "Pi-Apps: Raspberry Pi app store" \
+          --icon "${DIRECTORY}/icons/logo.png" --scrollbarcolor ffffff40 --scrollindicatorcolor 0000ff80 \
+          --width $width --height $height --xposition $xposition --yposition $yposition \
+          --button "${DIRECTORY}/icons/logo-3d.png;;$((($width/2)-(300/2))),0;pi-apps-homepage1" \
+          -g "${DIRECTORY}/icons/background-3d.png"
+          )"
+      elif [ "$guimode" == xlunch-dark-3d ];then
+        #dark mode, 3d opaque version
+        app="$(echo -e "$LIST" | xlunch -WoCS -s 64 --bc 2F313600 --tc DCDDDE --pc ffffffa0 --hc ffffff30 \
+          -p "$searchbox" -a -c $([ $width -lt 550 ] && echo 1 || echo 2) --title "Pi-Apps: Raspberry Pi app store" \
+          --icon "${DIRECTORY}/icons/logo.png" --scrollbarcolor ffffff20 --scrollindicatorcolor ffffff40 \
+          --width $width --height $height --xposition $xposition --yposition $yposition \
+          --button "${DIRECTORY}/icons/logo-3d-dark.png;;$((($width/2)-(300/2))),0;pi-apps-homepage1" \
+          -g "${DIRECTORY}/icons/background-3d-dark.png"
+          )"
+      else
+        #dark mode, transparent version
+        app="$(echo -e "$LIST" | xlunch -WoCS -s 64 --bc 000000A0 --tc ffffffff --pc 6060ffff --hc 60606010 \
+          -p "$searchbox" -a -c $([ $width -lt 550 ] && echo 1 || echo 2) --title "Pi-Apps: Raspberry Pi app store" \
+          --icon "${DIRECTORY}/icons/logo.png" --scrollbarcolor ffffff40 --scrollindicatorcolor 0000ff80 \
+          --width $width --height $height --xposition $xposition --yposition $yposition \
+          --button "${DIRECTORY}/icons/logo-128-trans.png;;$((($width/2)-(128/2))),0;pi-apps-homepage1" \
+          --button "${DIRECTORY}/icons/logo-trans.png;;$([ -z "$prefix" ] && echo '45' || echo '65'),$([ -z "$prefix" ] && echo '10' || echo '0');pi-apps-homepage1"
+          #-g ~/blur.png
+          )"
+      fi
+      action=details
+      
+      if [ -z "$app" ];then
+        #no app was clicked on, then the window must have been closed.
+        exit 0
+      fi
+      
+      #homepage button
+      if [ "$app" == 'pi-apps-homepage1' ];then
+        chromium-browser "$(cat "${DIRECTORY}/etc/git_url")" &
+        app=''
+        action=main-window
+      fi
+    else
+      error "Unrecognized app list style '$guimode'!"
+    fi
+    app="$(echo "$app" | grep .)"
+    
+    if [ "$app" == 'Updates/' ];then
+      action=view-updates
+      app=''
+    fi
+    
+  elif [ "$action" == exit ];then
+    exit 0
+  elif [ "$action" == back ];then
+    prefix="$(dirname "$prefix" | tr -d '.')"
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == details ];then
+    app="$(head -n1 <<<"$app")"
+    if echo "$app" | grep -q '/$' ;then
+      #folder
+      if [ "$app" == './' ];then
+        prefix="$(dirname "$prefix" | tr -d '.')"
+      else
+        prefix="$prefix/$app"
+        prefix="${prefix::-1}"
+        prefix="$(echo "$prefix" | sed 's+^/++')"
+      fi
+      app=''
+      action='main-window'
+    else
+      #app
+      
+      #if an icon exists but it's not named correctly, resize it and create proper icon-names
+      if [ ! -f "${DIRECTORY}/apps/$app/icon-64.png" ] && [ ! -f "${DIRECTORY}/apps/$app/icon-24.png" ] && [ -f "${DIRECTORY}/apps/$app/"*.png ] && command -v convert >/dev/null ;then
+        origicon="$(echo "${DIRECTORY}/apps/$app/"*.png)"
+        echo "Converting $origicon to icon-64.png and icon-24.png"
+        convert "$origicon" -resize 64x64 "${DIRECTORY}/apps/${app}/icon-64.png"
+        convert "$origicon" -resize 24x24 "${DIRECTORY}/apps/${app}/icon-24.png"
+      fi
+      
+      if [ -f "${DIRECTORY}/data/installed-packages/${app}" ] && [ ! -z "$(cat "${DIRECTORY}/data/installed-packages/${app}")" ];then
+        installedpackages="
+This app installed these packages: $(cat "${DIRECTORY}/data/installed-packages/${app}" | sort | uniq | tr '\n' ' ')"
+      else
+        installedpackages=''
+      fi
+      
+      #text below the app icon
+      description="$(cat "${DIRECTORY}/apps/${app}/description" || echo 'Description unavailable')$installedpackages"
+      
+      #text to the right of the app icon
+      abovetext="<b>$app</b>
+- Current status: $(echo "$(app_status "${app}")" | sed 's/corrupted/corrupted (installation failed)/g' | sed 's/disabled/disabled (installation is prevented on your system)/g')"
+      if [ -f "${DIRECTORY}/apps/${app}/website" ];then
+        #show website if it exists
+        abovetext="$abovetext
+- Website: <a href="\""$(cat "${DIRECTORY}/apps/${app}/website" | head -n1)"\"">$(cat "${DIRECTORY}/apps/${app}/website" | head -n1)</a>"
+        
+      fi
+      
+      if [ -z "$clicklist" ];then
+        source "${DIRECTORY}/api"
+        clicklist="$(usercount)"
+      fi
+      
+      usercount="$(echo "$clicklist" | grep " $app"'$' | awk '{print $1}' | head -n1)"
+      if [ ! -z "$usercount" ] && [ "$usercount" -gt 20 ];then
+        abovetext="$abovetext
+- <b>$(printf "%'d" "$usercount")</b> users"
+        
+        if [ "$usercount" -ge 1500 ] && [ "$usercount" -lt 10000 ];then
+          #if a lot of users, add an exclamation point!
+          abovetext="${abovetext}!"
+        elif [ "$usercount" -ge 10000 ];then
+          #if a crazy number of users, add two exclamation points!
+          abovetext="${abovetext}!!"
+        fi
+      fi
+      
+      #array holding various buttons that may be passed to yad
+      whichbutton=()
+      
+      if [ -f "${DIRECTORY}/apps/$app/uninstall" ] || [ -f "${DIRECTORY}/apps/$app/install" ] || [ -f "${DIRECTORY}/apps/$app/install-$arch" ];then
+        whichbutton+=("--button=Scripts!${DIRECTORY}/icons/shellscript.png!Feel free to see how an app is installed!"$'\n'"Perfect for learning or troubleshooting.:6")
+      fi
+      if [ "$(cat "${DIRECTORY}/data/settings/Show Edit button")" == 'Yes' ];then
+        #if edit button enabled, show it
+        whichbutton+=("--button=Edit!${DIRECTORY}/icons/edit.png!Make changes to the app:8")
+      fi
+      if [ -f "${DIRECTORY}/apps/${app}/credits" ];then
+        #if credits file exists, display credits button
+        whichbutton+=("--button=Credits!!See who made the app and who put it on Pi-Apps:10")
+      fi
+      #display buttons based on app's status file
+      if [ "$(app_status "${app}")" == 'installed' ];then
+        #if installed, display uninstall button
+        whichbutton+=("--button=!${DIRECTORY}/icons/uninstall.png:2")
+      elif [ "$(app_status "${app}")" == 'uninstalled' ];then
+        #if uninstalled, display install button
+        whichbutton+=("--button=!${DIRECTORY}/icons/install.png:4")
+      elif [ "$(app_status "${app}")" == 'disabled' ];then
+        #if disabled, display no buttons
+        whichbutton+=("--button=<b>Enable</b>!!Force this app to install on your system."$'\n'"This app was disabled for a reason so if you enable it..."$'\n'"YOU HAVE BEEN WARNED.:12")
+      else
+        #if app status is 'corrupted', and a log file exists for this app, then display a button to view the log file
+        if [ "$(app_status "${app}")" == 'corrupted' ];then
+          logfile="$(ls "$DIRECTORY/logs"/* -t | grep "fail-${app}" | head -n1)"
+          if [ ! -z "$logfile" ];then
+            whichbutton+=("--button=Errors!${DIRECTORY}/icons/log-file.png!$app failed to $(echo "$(basename "$logfile")" | awk -F'-' '{print $1}'). Click this button to view the error output saved in the log file.:14")
+          fi
+        fi
+        #if status is corrupted or unknown, then show both buttons
+        whichbutton+=("--button=!${DIRECTORY}/icons/uninstall.png:2" "--button=!${DIRECTORY}/icons/install.png:4")
+      fi
+      
+      #kill the splash screen
+      (sleep 1; kill "$splashpid" 2>/dev/null) &
+      
+      echo "$description" | yad --text-info --fontname=12 --wrap --show-uri --text="$(echo "$abovetext" | sed 's/&/&amp;/g')" \
+        --image="${DIRECTORY}/apps/${app}/icon-64.png" --image-on-top \
+        --title="Details of ${app}" --window-icon="${DIRECTORY}/icons/logo.png" --center --width=700 --height=300 \
+        --button=Back!"${DIRECTORY}/icons/back.png":0 \
+        "${whichbutton[@]}"
+      button=$? #get exit code to determine which button was pressed
+      
+      prevaction="$action" #remember the pervious action we came from
+      
+      case $button in
+      1)
+        action=exit
+        ;;
+      0)
+        action=main-window
+        ;;
+      2)
+        action=uninstall
+        ;;
+      4)
+        action=install
+        ;;
+      6)
+        action=scripts
+        ;;
+      8)
+        action=edit
+        ;;
+      10)
+        action=credits
+        ;;
+      12)
+        action=enable
+        ;;
+      14)
+        action=viewlog
+        ;;
+      *)
+        action=unknown
+        ;;
+      esac
+    fi
+    
+  elif [ "$action" == uninstall ];then
+    #uninstall
+    if ! echo "$app" | grep -q '/' ;then
+      uninstall "$app"
+      #clear output var to prompt main window to open next
+    else
+      motd="Sorry, you can't uninstall folders."
+      prefix=''
+    fi
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == install ];then
+    #install
+    if ! echo "$app" | grep -q '/' ;then
+      install "$app"
+      #clear output var to prompt main window to open next
+    else
+      motd="Sorry, you can't install folders."
+      prefix=''
+    fi
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == search ];then
+    #search
+    echo "Search"
+    app="$(app_search_gui)"
+    
+    if [ -z "$app" ];then
+      #no app selected from results
+      action=main-window
+    else
+      action=details #view selected app
+      
+      #set the current category to be the category that the app belongs in
+      prefix="$(dirname "$(app_categories | grep -v "^All Apps/" | grep -v "^Installed/" | grep "/$app"'$' | head -n1)")"
+      [ "$prefix" == '.' ] && prefix=''
+    fi
+    
+  elif [ "$action" == scripts ];then
+    #view app's scripts
+    #determine path to app's install script
+    if [ -f "${DIRECTORY}/apps/${app}/install-${arch}" ];then
+      install_script="${DIRECTORY}/apps/${app}/install-${arch}"
+    elif [ -f "${DIRECTORY}/apps/${app}/install" ];then
+      install_script="${DIRECTORY}/apps/${app}/install"
+    fi
+    
+    uninstall_script="${DIRECTORY}/apps/${app}/uninstall"
+    
+    text_editor "$uninstall_script" &
+    sleep 0.1
+    text_editor "$install_script" &
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == edit ];then
+    "${DIRECTORY}/createapp" "$app"
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == credits ];then
+    cat "${DIRECTORY}/apps/${app}/credits" | yad --text-info --fontname=12 --wrap \
+      --image="${DIRECTORY}/apps/${app}/icon-64.png" --image-on-top \
+      --title="Credits of ${app}" --window-icon="${DIRECTORY}/icons/logo.png" --center --width=700 --height=300 \
+      --button=Close!"${DIRECTORY}/icons/exit.png":0
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == enable ];then
+    echo "Enabling $app..."
+    app="$app"
+    #remove status file containing 'disabled'
+    rm -f "${DIRECTORY}/data/status/${app}"
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == viewlog ];then
+    echo "Viewing error log of $app..."
+    echo "Log filepath: $logfile"
+    "${DIRECTORY}/etc/viewlog" "$logfile"
+    
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == mind-reading ];then
+    yad --center --title='Pi-Apps' --width=310 \
+      --window-icon="${DIRECTORY}/icons/logo.png" \
+      --image="${DIRECTORY}/icons/mind-reading.png" \
+      --text="Mind reading is not supported.
+(You didn't select an App)" \
+      --button=OK:0 || exit 0
+    
+    action='main-window'
+    
+  elif [ "$action" == view-updates ];then
+    "${DIRECTORY}/updater" gui fast
+    action="$prevaction" #return to previous action
+    
+  elif [ "$action" == unknown ];then
+    error "Unknown button: $button"
+  fi
+  
+done
