@@ -1,0 +1,180 @@
+; File generated automatically from dlls/mfplat/mfplat.spec; do not edit!
+
+LIBRARY mfplat.dll
+
+EXPORTS
+  FormatTagFromWfx@0 @1 PRIVATE
+  MFCreateGuid@0 @2 PRIVATE
+  MFGetIoPortHandle@0 @3 PRIVATE
+  MFGetPlatformVersion@0 @4 PRIVATE
+  MFGetRandomNumber@0 @5 PRIVATE
+  MFIsFeatureEnabled@0 @6 PRIVATE
+  MFIsQueueThread@0 @7 PRIVATE
+  MFPlatformBigEndian@0 @8 PRIVATE
+  MFPlatformLittleEndian@0 @9 PRIVATE
+  ValidateWaveFormat@0 @10 PRIVATE
+  CopyPropVariant@0 @11 PRIVATE
+  CreatePropVariant@0 @12 PRIVATE
+  CreatePropertyStore@4 @13
+  DestroyPropVariant@0 @14 PRIVATE
+  GetAMSubtypeFromD3DFormat@0 @15 PRIVATE
+  GetD3DFormatFromMFSubtype@0 @16 PRIVATE
+  LFGetGlobalPool@0 @17 PRIVATE
+  MFAddPeriodicCallback@12=rtworkq.RtwqAddPeriodicCallback @18
+  MFAllocateSerialWorkQueue@8=rtworkq.RtwqAllocateSerialWorkQueue @19
+  MFAllocateWorkQueue@4 @20
+  MFAllocateWorkQueueEx@8=rtworkq.RtwqAllocateWorkQueue @21
+  MFAppendCollection@0 @22 PRIVATE
+  MFAverageTimePerFrameToFrameRate@0 @23 PRIVATE
+  MFBeginCreateFile@28 @24
+  MFBeginGetHostByName@0 @25 PRIVATE
+  MFBeginRegisterWorkQueueWithMMCSS@0 @26 PRIVATE
+  MFBeginRegisterWorkQueueWithMMCSSEx@24=rtworkq.RtwqBeginRegisterWorkQueueWithMMCSS @27
+  MFBeginUnregisterWorkQueueWithMMCSS@0 @28 PRIVATE
+  MFBlockThread@0 @29 PRIVATE
+  MFCalculateBitmapImageSize@0 @30 PRIVATE
+  MFCalculateImageSize@16 @31
+  MFCancelCreateFile@4 @32
+  MFCancelWorkItem@8=rtworkq.RtwqCancelWorkItem @33
+  MFCompareFullToPartialMediaType@8 @34
+  MFCompareSockaddrAddresses@0 @35 PRIVATE
+  MFConvertColorInfoFromDXVA@0 @36 PRIVATE
+  MFConvertColorInfoToDXVA@8 @37
+  MFConvertFromFP16Array@0 @38 PRIVATE
+  MFConvertToFP16Array@0 @39 PRIVATE
+  MFCopyImage@24 @40
+  MFCreate2DMediaBuffer@20 @41
+  MFCreateAMMediaTypeFromMFMediaType@0 @42 PRIVATE
+  MFCreateAlignedMemoryBuffer@12 @43
+  MFCreateAsyncResult@16=rtworkq.RtwqCreateAsyncResult @44
+  MFCreateAttributes@8 @45
+  MFCreateAudioMediaType@0 @46 PRIVATE
+  MFCreateCollection@4 @47
+  MFCreateDXGIDeviceManager@8 @48
+  MFCreateEventQueue@4 @49
+  MFCreateFile@20 @50
+  MFCreateLegacyMediaBufferOnMFMediaBuffer@0 @51 PRIVATE
+  MFCreateMFByteStreamOnStream@8 @52
+  MFCreateMFByteStreamOnStreamEx@8 @53
+  MFCreateMFByteStreamWrapper@8 @54
+  MFCreateMFVideoFormatFromMFMediaType@12 @55
+  MFCreateMediaBufferFromMediaType@24 @56
+  MFCreateMediaBufferWrapper@0 @57 PRIVATE
+  MFCreateMediaEvent@20 @58
+  MFCreateMediaType@4 @59
+  MFCreateMediaTypeFromRepresentation@0 @60 PRIVATE
+  MFCreateMemoryBuffer@8 @61
+  MFCreateMemoryStream@0 @62 PRIVATE
+  MFCreatePathFromURL@0 @63 PRIVATE
+  MFCreatePresentationDescriptor@12 @64
+  MFCreateSample@4 @65
+  MFCreateSocket@0 @66 PRIVATE
+  MFCreateSocketListener@0 @67 PRIVATE
+  MFCreateSourceResolver@4 @68
+  MFCreateStreamDescriptor@16 @69
+  MFCreateSystemTimeSource@4 @70
+  MFCreateSystemUnderlyingClock@0 @71 PRIVATE
+  MFCreateTempFile@0 @72 PRIVATE
+  MFCreateTrackedSample@4 @73
+  MFCreateTransformActivate@4 @74
+  MFCreateURLFromPath@0 @75 PRIVATE
+  MFCreateUdpSockets@0 @76 PRIVATE
+  MFCreateVideoMediaType@0 @77 PRIVATE
+  MFCreateVideoMediaTypeFromBitMapInfoHeader@0 @78 PRIVATE
+  MFCreateVideoMediaTypeFromBitMapInfoHeaderEx@0 @79 PRIVATE
+  MFCreateVideoMediaTypeFromSubtype@8 @80
+  MFCreateVideoMediaTypeFromVideoInfoHeader2@0 @81 PRIVATE
+  MFCreateVideoMediaTypeFromVideoInfoHeader@0 @82 PRIVATE
+  MFCreateWaveFormatExFromMFMediaType@16 @83
+  MFDeserializeAttributesFromStream@0 @84 PRIVATE
+  MFDeserializeEvent@0 @85 PRIVATE
+  MFDeserializeMediaTypeFromStream@0 @86 PRIVATE
+  MFDeserializePresentationDescriptor@0 @87 PRIVATE
+  MFEndCreateFile@8 @88
+  MFEndGetHostByName@0 @89 PRIVATE
+  MFEndRegisterWorkQueueWithMMCSS@0 @90 PRIVATE
+  MFEndUnregisterWorkQueueWithMMCSS@0 @91 PRIVATE
+  MFFrameRateToAverageTimePerFrame@0 @92 PRIVATE
+  MFFreeAdaptersAddresses@0 @93 PRIVATE
+  MFGetAdaptersAddresses@0 @94 PRIVATE
+  MFGetAttributesAsBlob@12 @95
+  MFGetAttributesAsBlobSize@8 @96
+  MFGetConfigurationDWORD@0 @97 PRIVATE
+  MFGetConfigurationPolicy@0 @98 PRIVATE
+  MFGetConfigurationStore@0 @99 PRIVATE
+  MFGetConfigurationString@0 @100 PRIVATE
+  MFGetMFTMerit@0 @101 PRIVATE
+  MFGetNumericNameFromSockaddr@0 @102 PRIVATE
+  MFGetPlaneSize@16 @103
+  MFGetPlatform@0 @104 PRIVATE
+  MFGetPluginControl@4 @105
+  MFGetPrivateWorkqueues@0 @106 PRIVATE
+  MFGetSockaddrFromNumericName@0 @107 PRIVATE
+  MFGetStrideForBitmapInfoHeader@12 @108
+  MFGetSystemTime@0 @109
+  MFGetTimerPeriodicity@4 @110
+  MFGetUncompressedVideoFormat@0 @111 PRIVATE
+  MFGetWorkQueueMMCSSClass@12=rtworkq.RtwqGetWorkQueueMMCSSClass @112
+  MFGetWorkQueueMMCSSTaskId@8=rtworkq.RtwqGetWorkQueueMMCSSTaskId @113
+  MFGetWorkQueueMMCSSPriority@8=rtworkq.RtwqGetWorkQueueMMCSSPriority @114
+  MFHeapAlloc@20 @115
+  MFHeapFree@4 @116
+  MFInitAMMediaTypeFromMFMediaType@0 @117 PRIVATE
+  MFInitAttributesFromBlob@12 @118
+  MFInitMediaTypeFromAMMediaType@0 @119 PRIVATE
+  MFInitMediaTypeFromMFVideoFormat@0 @120 PRIVATE
+  MFInitMediaTypeFromMPEG1VideoInfo@0 @121 PRIVATE
+  MFInitMediaTypeFromMPEG2VideoInfo@0 @122 PRIVATE
+  MFInitMediaTypeFromVideoInfoHeader2@0 @123 PRIVATE
+  MFInitMediaTypeFromVideoInfoHeader@0 @124 PRIVATE
+  MFInitMediaTypeFromWaveFormatEx@12 @125
+  MFInitVideoFormat@0 @126 PRIVATE
+  MFInitVideoFormat_RGB@0 @127 PRIVATE
+  MFInvokeCallback@4 @128
+  MFJoinIoPort@0 @129 PRIVATE
+  MFJoinWorkQueue@12=rtworkq.RtwqJoinWorkQueue @130
+  MFLockPlatform@0=rtworkq.RtwqLockPlatform @131
+  MFLockWorkQueue@4=rtworkq.RtwqLockWorkQueue @132
+  MFPutWaitingWorkItem@16=rtworkq.RtwqPutWaitingWorkItem @133
+  MFPutWorkItem@12 @134
+  MFPutWorkItem2@16 @135
+  MFPutWorkItemEx@8 @136
+  MFPutWorkItemEx2@12 @137
+  MFRecordError@0 @138 PRIVATE
+  MFRegisterLocalByteStreamHandler@12 @139
+  MFRegisterLocalSchemeHandler@8 @140
+  MFRegisterPlatformWithMMCSS@12=rtworkq.RtwqRegisterPlatformWithMMCSS @141
+  MFRemovePeriodicCallback@4=rtworkq.RtwqRemovePeriodicCallback @142
+  MFScheduleWorkItem@20 @143
+  MFScheduleWorkItemEx@16=rtworkq.RtwqScheduleWorkItem @144
+  MFSerializeAttributesToStream@0 @145 PRIVATE
+  MFSerializeEvent@0 @146 PRIVATE
+  MFSerializeMediaTypeToStream@0 @147 PRIVATE
+  MFSerializePresentationDescriptor@0 @148 PRIVATE
+  MFSetSockaddrAny@0 @149 PRIVATE
+  MFShutdown@0 @150
+  MFStartup@8 @151
+  MFStreamDescriptorProtectMediaType@0 @152 PRIVATE
+  MFTEnum@40 @153
+  MFTEnum2@40 @154
+  MFTEnumEx@36 @155
+  MFTGetInfo@0 @156 PRIVATE
+  MFTRegister@60 @157
+  MFTRegisterLocal@32 @158
+  MFTRegisterLocalByCLSID@32 @159
+  MFTUnregister@16 @160
+  MFTUnregisterLocal@4 @161
+  MFTUnregisterLocalByCLSID@16 @162
+  MFUnregisterPlatformFromMMCSS@0=rtworkq.RtwqUnregisterPlatformFromMMCSS @163
+  MFTraceError@0 @164 PRIVATE
+  MFTraceFuncEnter@0 @165 PRIVATE
+  MFUnblockThread@0 @166 PRIVATE
+  MFUnjoinWorkQueue@8=rtworkq.RtwqUnjoinWorkQueue @167
+  MFUnlockPlatform@0=rtworkq.RtwqUnlockPlatform @168
+  MFUnlockWorkQueue@4=rtworkq.RtwqUnlockWorkQueue @169
+  MFUnwrapMediaType@8 @170
+  MFValidateMediaTypeSize@0 @171 PRIVATE
+  MFWrapMediaType@16 @172
+  MFllMulDiv@0 @173 PRIVATE
+  PropVariantFromStream@0 @174 PRIVATE
+  PropVariantToStream@0 @175 PRIVATE
