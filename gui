@@ -113,7 +113,7 @@ while true;do
         "--button=!${DIRECTORY}/icons/info.png!Details:0" )
       fi
       
-      output="$(echo -e "$LIST" | yad --center --title='Pi-Apps'"$([ ! -z "$prefix" ] && echo ": $(echo "$prefix" | tr '/' '>')")" --width=310 --height=400 --no-headers \
+      output="$(echo -e "$LIST" | yad --center --title='Pi-Apps'"$([ ! -z "$prefix" ] && echo ": $(echo "$prefix" | tr '/' '>')")" --width=810 --height=550 --no-headers \
         --text="$([ -z "$prefix" ] && echo "$motd" || echo "Viewing $(echo "$prefix" | tr '/' '>') category")" --image="${DIRECTORY}/icons/logo-64.png" --image-on-top \
         --list --multiple --separator='\n' --window-icon="${DIRECTORY}/icons/logo.png" \
         --column=:IMG --column=:IMG --column=Name --column=Sysname:HD --column=tip:HD \
