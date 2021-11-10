@@ -1,4 +1,4 @@
-Alacritty Terminal|Tools
+Alacritty Terminal|Terminal
 All Is Well|Tools System
 Amiberry|Emulators
 AndroidBuddy|Tools
@@ -40,11 +40,11 @@ eDEX-UI|Terminal
 Email Checker|Internet
 Falkon|Internet Browser
 Firefox Rapid Release|Internet Browser
-Flameshot|Tools
+Flameshot|Tools Screenshot
 FreeCAD|Editors
 FreeTube|Internet Download Manager
 Geany Dark Mode|Editors
-Geekbench|Tools
+Geekbench|Tools Benchmark
 Github-CLI|Terminal
 Godot Engine 3.2.4|Games
 Heroes 2|Diverse
@@ -77,12 +77,12 @@ Pale Moon|Internet Browser
 Pale Moon Browser|Internet Browser
 Persepolis Download Manager|Internet
 Pi Power Tools|Tools
-Pi-Apps Terminal Plugin|Tools App Store fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pi-Apps Terminal Plugin|Tools App Store
 Pi-Apps Terminal Plugin (bash)|Tools App Store
-Pi-Apps Terminal Plugin (python)|Tools App Store fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pi-Apps Terminal Plugin (python)|Tools App Store
 PiGro|Tools
 piKiss|Tools App Store
-PiSafe|Tools
+PiSafe|Tools Imager
 Powerline-Shell|Terminal
 PPSSPP (PSP emulator)|Emulators
 Processing IDE|Editors Programmers
@@ -92,7 +92,7 @@ Puffin Browser Demo|Internet Browser
 Pycharm CE|Editors Programmers
 QEMU|Emulators
 Quartz|Internet Browser
-Raspi2png|Tools
+Raspi2png|Tools Screenshot
 Remarkable|Editors Programmers
 Scratch 2|Diverse
 Scrcpy|Tools
@@ -106,13 +106,13 @@ StackEdit|Editors Programmers
 Steam|Games
 Stunt Rally|Games
 Sublime Text|Editors Programmers
-Sysmon|Tools
-TBOPlayer|Tools
+Sysmon|Tools System
+TBOPlayer|Internet Download Manager
 TeamViewer Host|Internet
 Telegram|Messanger
 template|hidden
-Temps|Tools
-Timeshift|Tools
+Temps|Theme
+Timeshift|Tools System
 tldr|Tools
 Tor|Internet Browser
 Tor Browser|Internet Browser
@@ -120,8 +120,8 @@ Turbowarp|Editors
 Ulauncher|Theme Launcher
 unrar|Tools System fehlt
 Update Buddy|Tools System
-USBImager|Tools
-VeraCrypt|Tools
+USBImager|Tools Imager
+VeraCrypt|Terminal Tools
 Visual Studio Code|Editors Programmers
 Vivaldi|Internet Browser
 VSCodium|Editors Programmers
@@ -130,7 +130,7 @@ Web Apps|Messanger
 WeChat|Messanger
 WhatsApp|Messanger
 Windows 10 Theme|Theme
-Windows Flasher|Tools System
+Windows Flasher|Tools Imager
 Windows Screensavers|Theme
 Wine (x86)|Emulators
 WPS Office|Editors
