@@ -42,7 +42,7 @@ if [ -z "$DIRECTORY" ] || [ "$DIRECTORY" == "$HOME" ] || [ "$DIRECTORY" == bash 
   #if directory does not exist, download it
   if [ ! -d "$DIRECTORY" ];then
     echo "Downloading Pi-Apps..."
-    output="$(git clone --depth 1 https://github.com/Botspot/pi-apps "$DIRECTORY" 2>&1)"
+    output="$(git clone --depth 1 https://github.com/dwhr-pi/pi-apps "$DIRECTORY" 2>&1)"
     if [ ! -d "$DIRECTORY" ];then
       error "Pi-Apps download failed!\ngit clone output was: $output"
     fi
@@ -107,7 +107,8 @@ cd $HOME
 if [ -f /usr/local/bin/twistver ];then
   PREIFS="$IFS"
   IFS=$'\n'
-  apps="Chromium Media Edition
+  apps=""
+  appsNichtVersteckt="Chromium Media Edition
 CommanderPi
 Box86
 Discord

@@ -108,7 +108,7 @@ if [ $reloadlist == 1 ];then
     if [ -z "$line" ];then
       echo "WARNING: $app app not found in $(echo "${DIRECTORY}/data/categories/structure" | sed 's+/home/pi+~+g') file." 1>&2
       if [ -z "$onlinestructurefile" ];then
-        onlinestructurefile="$(wget -qO- 'https://raw.githubusercontent.com/Botspot/pi-apps/master/data/categories/structure')"
+        onlinestructurefile="$(wget -qO- 'https://raw.githubusercontent.com/dwhr-pi/pi-apps/master/data/categories/structure')"
       fi
       onlinematch="$(echo "$onlinestructurefile" | grep "$app"'|')"
       if [ ! -z "$onlinematch" ];then

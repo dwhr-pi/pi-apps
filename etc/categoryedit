@@ -81,7 +81,7 @@ $category
   elif [ "$button" == 4 ];then
     #reset
     rm "${DIRECTORY}/data/categories/structure"
-    wget -qO "${DIRECTORY}/data/categories/structure" 'https://raw.githubusercontent.com/Botspot/pi-apps/master/data/categories/structure'
+    wget -qO "${DIRECTORY}/data/categories/structure" 'https://raw.githubusercontent.com/dwhr-pi/pi-apps/master/data/categories/structure'
     [ ! -f "${DIRECTORY}/data/categories/structure" ] || [ -z "$(cat "${DIRECTORY}/data/categories/structure")" ] && error 'Failed to download a fresh structure file!'
   else
     #cancel or WM X

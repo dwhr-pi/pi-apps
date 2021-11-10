@@ -100,7 +100,7 @@ ${params}"
   yadparams="$(echo "$yadparams" | sed 's/ / /g')"
   tooltips="$(echo "$tooltips" | sed 's/ / /g')"
   
-  output="$(yad --center --title='Pi-Apps Settings' --width=310 --height=300 \
+  output="$(yad --center --title='Pi-Apps Settings' --width=410 --height=350 \
     --form --separator='\n' --window-icon="${DIRECTORY}/icons/logo.png" --columns=2 \
     $tooltips \
     --field='Categories...'!"${DIRECTORY}/icons/categories.png":FBTN "bash -c '${DIRECTORY}/etc/categoryedit &>/dev/null'" \

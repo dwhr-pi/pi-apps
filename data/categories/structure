@@ -1,32 +1,32 @@
-Alacritty Terminal|Werkzeuge
+Alacritty Terminal|Tools
 All Is Well|Tools
-Amiberry|Emulatoren
+Amiberry|Games
 AndroidBuddy|Tools
 Angry IP scanner|Internet
 AnyDesk|Internet
 Arduino|Editors
-AstroMenace|Diverse
-Autostar|Werkzeuge
+AstroMenace|Games
+Autostar|Tools
 ATlauncherPI|Games fehlt
 Back to Chromium v78|Internet
 Back to Chromium v86|Internet
 BalenaEtcher|Tools
-BleachBit|Werkzeuge
-BlockPi|Diverse
+BleachBit|Tools
+BlockPi|Editors
 Bongo Cam|Diverse
-Box64|Werkzeuge
+Box64|Tools
 Box86|Tools
 Boxy SVG|Editors
 Browsh|Internet
-Chiaki|Diverse
+Chiaki|Games
 Chromium Widevine|Internet
 Clam Antivirus|Tools
-CloudBuddy|Werkzeuge
-Codex|Werkzeuge
+CloudBuddy|Internet
+Codex|Editors
 Color Emoji font|Eyecandy
 CommanderPi|Tools
 Conky|Eyecandy
-Conky Rings|Blickfang
+Conky Rings|Eyecandy
 Cool Retro Term|Eyecandy
 Cura|Editors
 Descent 1|Games
@@ -34,18 +34,18 @@ Descent 2|Games
 Discord|Internet
 Doom 3|Games
 Downgrade Chromium|Internet Neu
-Drawing|Diverse
+Drawing|Editors
 Eagle CAD|Editors
 eDEX-UI|Eyecandy
 Email Checker|Internet
-Falkon|Diverse
-Firefox Rapid Release|Internet Neu
-Flameshot|Internet Neu
+Falkon|Internet
+Firefox Rapid Release|Internet
+Flameshot|Tools
 FreeCAD|Editors
-FreeTube|Internet
+FreeTube|Internet fehlt
 Geany Dark Mode|Eyecandy
-Geekbench|Diverse
-Github-CLI|Werkzeuge
+Geekbench|Tools
+Github-CLI|Tools
 Godot Engine 3.2.4|Games
 Heroes 2|Diverse
 Https File Server|Diverse
@@ -62,27 +62,27 @@ Lokinet|Internet
 Mac OS Theme|Eyecandy
 Mesa 20.3|Tools fehlt
 Microsoft Teams|Diverse
-Min|Diverse
-Min Browser|Diverse
+Min|Internet
+Min Browser|Diverse fehlt komisch evt. nicht Debian oder weil Name doppelt
 Minecraft Bedrock|Games
 Minecraft Java|Games
-Minecraft Java MultiMC5|Spiele
+Minecraft Java MultiMC5|Games
 Minecraft Pi (Modded)|Games
 Mission Planner|Tools
-Node.js|Internet
+Node.js|Tools
 Notepad ++|Editors
 OBS Studio|Tools
-OpenSCAD|Editoren
-Pale Moon|Diverse
-Pale Moon Browser|Diverse
-Persepolis Download Manager|Diverse
+OpenSCAD|Editors
+Pale Moon|Internet
+Pale Moon Browser|Diverse fehlt komisch evt. nicht Debian oder weil Name doppelt
+Persepolis Download Manager|Internet
 Pi Power Tools|Tools
-Pi-Apps Terminal Plugin|Tools
-Pi-Apps Terminal Plugin (bash)|Werkzeuge
-Pi-Apps Terminal Plugin (python)|Werkzeuge
+Pi-Apps Terminal Plugin|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pi-Apps Terminal Plugin (bash)|Tools
+Pi-Apps Terminal Plugin (python)|Werkzeuge fehlt komisch evt. nicht Debian oder weil Name doppelt
 PiGro|Tools
-piKiss|Tools
-PiSafe|Werkzeuge
+piKiss|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
+PiSafe|Tools
 Powerline-Shell|Eyecandy
 PPSSPP (PSP emulator)|Games
 Processing IDE|Editors
@@ -91,14 +91,14 @@ Puffin|Internet Neu
 Puffin Browser Demo|Internet
 Pycharm CE|Editors
 QEMU|Tools
-Quartz|Diverse
+Quartz|Internet
 Raspi2png|Tools
 Remarkable|Editors
 Scratch 2|Diverse
 Scrcpy|Tools
 Simplenote|Editors fehlt
 Snap Store|Tools
-Snapdrop|Internet
+Snapdrop|Tools
 Sonic Pi|Diverse
 Sonic Pi 3.2|Editors
 SpeedTest-CLI|Internet
@@ -106,17 +106,17 @@ StackEdit|Editors
 Steam|Games
 Stunt Rally|Games
 Sublime Text|Editors
-Sysmon|Diverse
+Sysmon|Tools
 TBOPlayer|Tools
 TeamViewer Host|Internet
-Telegram|Diverse
+Telegram|Internet
 template|hidden
-Temps|Diverse
+Temps|Tools
 Timeshift|Tools
 tldr|Tools
-Tor|Diverse
-Tor Browser|Internet
-Turbowarp|Diverse
+Tor|Internet
+Tor Browser|Internet fehlt komisch evt. nicht Debian oder weil Name doppelt
+Turbowarp|Editors
 Ulauncher|Eyecandy
 unrar|Tools fehlt
 Update Buddy|Tools
@@ -130,12 +130,12 @@ Web Apps|Diverse
 Wechat|Diverse
 Whatsapp|Internet
 Windows 10 Theme|Eyecandy
-Windows Flasher|Diverse
+Windows Flasher|Tools
 Windows Screensavers|Diverse
 Wine (x86)|Tools
 WPS Office|Editors
 XSnow|Diverse
-Xtreme Download Manager|Diverse
+Xtreme Download Manager|Internet
 YouTubuddy|Internet
 Zoom|Internet
 Zoom PWA|Internet Neu

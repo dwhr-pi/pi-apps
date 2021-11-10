@@ -82,7 +82,7 @@ uninstall() {
   while ps -C manage &>/dev/null;do sleep 0.1; done
 }
 
-motd="$(echo -e "$(wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps-announcements/main/message | shuf -n 1)")"
+motd="$(echo -e "$(wget -qO- https://raw.githubusercontent.com/dwhr-pi/pi-apps-announcements/main/message | shuf -n 1)")"
 
 #app list mode. Allowed values: 'yad', 'xlunch'
 guimode="$(cat "${DIRECTORY}/data/settings/App List Style")"
@@ -228,7 +228,7 @@ $LIST"
       
       #homepage button
       if [ "$output" == 'pi-apps-homepage1' ];then
-        chromium-browser https://github.com/Botspot/pi-apps &
+        chromium-browser https://github.com/dwhr-pi/pi-apps &
         output=''
       fi
     else
