@@ -8,8 +8,8 @@ Arduino|Editors
 AstroMenace|Games
 Autostar|Tools
 ATlauncherPI|Games fehlt
-Back to Chromium v78|Internet
-Back to Chromium v86|Internet
+Back to Chromium v78|Internet Browser
+Back to Chromium v86|Internet Browser
 BalenaEtcher|Tools
 BleachBit|Tools
 BlockPi|Editors
@@ -19,7 +19,7 @@ Box86|Tools
 Boxy SVG|Editors
 Browsh|Internet
 Chiaki|Games
-Chromium Widevine|Internet
+Chromium Widevine|Internet Browser
 Clam Antivirus|Tools
 CloudBuddy|Internet
 Codex|Editors
@@ -33,13 +33,13 @@ Descent 1|Games
 Descent 2|Games
 Discord|Internet
 Doom 3|Games
-Downgrade Chromium|Internet Neu
+Downgrade Chromium|Internet Browser
 Drawing|Editors
 Eagle CAD|Editors
 eDEX-UI|Eyecandy
 Email Checker|Internet
 Falkon|Internet
-Firefox Rapid Release|Internet
+Firefox Rapid Release|Internet Browser
 Flameshot|Tools
 FreeCAD|Editors
 FreeTube|Internet fehlt
@@ -62,8 +62,8 @@ Lokinet|Internet
 Mac OS Theme|Eyecandy
 Mesa 20.3|Tools fehlt
 Microsoft Teams|Diverse
-Min|Internet
-Min Browser|Diverse fehlt komisch evt. nicht Debian oder weil Name doppelt
+Min|Internet Browser
+Min Browser|Internet Browser fehlt komisch evt. nicht Debian oder weil Name doppelt
 Minecraft Bedrock|Games
 Minecraft Java|Games
 Minecraft Java MultiMC5|Games
@@ -73,8 +73,8 @@ Node.js|Tools
 Notepad ++|Editors
 OBS Studio|Tools
 OpenSCAD|Editors
-Pale Moon|Internet
-Pale Moon Browser|Diverse fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pale Moon|Internet Browser
+Pale Moon Browser|Internet Browser fehlt komisch evt. nicht Debian oder weil Name doppelt
 Persepolis Download Manager|Internet
 Pi Power Tools|Tools
 Pi-Apps Terminal Plugin|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
@@ -109,13 +109,13 @@ Sublime Text|Editors
 Sysmon|Tools
 TBOPlayer|Tools
 TeamViewer Host|Internet
-Telegram|Internet
+Telegram|Messanger
 template|hidden
 Temps|Tools
 Timeshift|Tools
 tldr|Tools
-Tor|Internet
-Tor Browser|Internet fehlt komisch evt. nicht Debian oder weil Name doppelt
+Tor|Internet Browser
+Tor Browser|Internet Browser fehlt komisch evt. nicht Debian oder weil Name doppelt
 Turbowarp|Editors
 Ulauncher|Eyecandy
 unrar|Tools fehlt
@@ -123,12 +123,12 @@ Update Buddy|Tools
 USBImager|Tools
 VeraCrypt|Tools
 Visual Studio Code|Editors
-Vivaldi|Internet
+Vivaldi|Internet Browser
 VSCodium|Editors
 WACUP (new WinAmp)|Tools
-Web Apps|Diverse
-Wechat|Diverse
-Whatsapp|Internet
+Web Apps|Messanger
+Wechat|Messanger
+Whatsapp|Messanger
 Windows 10 Theme|Eyecandy
 Windows Flasher|Tools
 Windows Screensavers|Diverse
