@@ -10,7 +10,7 @@ Autostar|Tools System
 ATlauncherPI|Games fehlt
 Back to Chromium v78|Internet Browser
 Back to Chromium v86|Internet Browser
-BalenaEtcher|Tools System
+BalenaEtcher|Tools Imager
 BleachBit|Tools System
 BlockPi|Editors Programmers
 Bongo Cam|Tools
@@ -75,7 +75,7 @@ OBS Studio|Tools
 OpenSCAD|Graphics CAD
 Pale Moon|Internet Browser
 Pale Moon Browser|Internet Browser
-Persepolis Download Manager|Internet
+Persepolis Download Manager|Internet Download Manager
 Pi Power Tools|Tools
 Pi-Apps Terminal Plugin|Tools App Store
 Pi-Apps Terminal Plugin (bash)|Tools App Store
@@ -101,7 +101,7 @@ Snap Store|Tools App Store
 Snapdrop|Tools
 Sonic Pi|Diverse
 Sonic Pi 3.2|Editors
-SpeedTest-CLI|Internet
+SpeedTest-CLI|Tools Benchmark
 StackEdit|Editors Programmers
 Steam|Games
 Stunt Rally|Games
@@ -113,7 +113,7 @@ Telegram|Messanger
 template|hidden
 Temps|Theme
 Timeshift|Tools System
-tldr|Tools
+tldr|Terminal Tools
 Tor|Internet Browser
 Tor Browser|Internet Browser
 Turbowarp|Editors
@@ -127,8 +127,8 @@ Vivaldi|Internet Browser
 VSCodium|Editors Programmers
 WACUP (new WinAmp)|Tools Audio
 Web Apps|Messanger
-WeChat|Messanger
-WhatsApp|Messanger
+Wechat|Messanger
+Whatsapp|Messanger
 Windows 10 Theme|Theme
 Windows Flasher|Tools Imager
 Windows Screensavers|Theme
