@@ -17,7 +17,7 @@ Bongo Cam|Diverse
 Box64|Emulators
 Box86|Emulators
 Boxy SVG|Graphics
-Browsh|Internet
+Browsh|Internet Browser
 Chiaki|Games
 Chromium Widevine|Internet Browser
 Clam Antivirus|Tools
@@ -31,14 +31,14 @@ Cool Retro Term|Terminal
 Cura|Graphics CAD
 Descent 1|Games
 Descent 2|Games
-Discord|Internet
+Discord|Messanger
 Doom 3|Games
 Downgrade Chromium|Internet Browser
 Drawing|Graphics
 Eagle CAD|Graphics CAD
 eDEX-UI|Eyecandy
 Email Checker|Internet
-Falkon|Internet
+Falkon|Internet Browser
 Firefox Rapid Release|Internet Browser
 Flameshot|Tools
 FreeCAD|Editors
@@ -54,7 +54,7 @@ Interactive Brokers TW|Tools fehlt
 jGRASP IDE|Editors
 KeePassX|fehlt
 Lego Digital Designer|Diverse
-Libreoffice MS theme|Diverse
+Libreoffice MS theme|Editors
 LibrePCB|Editors
 Lightpad|Theme Launcher
 LinuxCNC|Diverse
@@ -84,14 +84,14 @@ PiGro|Tools
 piKiss|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
 PiSafe|Tools
 Powerline-Shell|Terminal
-PPSSPP (PSP emulator)|Games
+PPSSPP (PSP emulator)|Emulators
 Processing IDE|Editors Programmers
 PrusaSlicer|Graphics CAD
 Puffin|Internet Neu
 Puffin Browser Demo|Internet
 Pycharm CE|Editors Programmers
-QEMU|Tools
-Quartz|Internet
+QEMU|Emulators
+Quartz|Internet Browser
 Raspi2png|Tools
 Remarkable|Editors Programmers
 Scratch 2|Diverse
@@ -135,7 +135,7 @@ Windows Screensavers|Diverse
 Wine (x86)|Tools
 WPS Office|Editors
 XSnow|Diverse
-Xtreme Download Manager|Internet
-YouTubuddy|Internet
-Zoom|Internet
-Zoom PWA|Internet Neu
+Xtreme Download Manager|Internet Download Manager
+YouTubuddy|Download Manager
+Zoom|Messanger
+Zoom PWA|Messanger
