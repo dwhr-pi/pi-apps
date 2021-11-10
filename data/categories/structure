@@ -36,13 +36,13 @@ Doom 3|Games
 Downgrade Chromium|Internet Browser
 Drawing|Graphics
 Eagle CAD|Graphics CAD
-eDEX-UI|Eyecandy
+eDEX-UI|Terminal
 Email Checker|Internet
 Falkon|Internet Browser
 Firefox Rapid Release|Internet Browser
 Flameshot|Tools
 FreeCAD|Editors
-FreeTube|Internet fehlt
+FreeTube|Internet Download Manager
 Geany Dark Mode|Editors
 Geekbench|Tools
 Github-CLI|Terminal
@@ -63,7 +63,7 @@ Mac OS Theme|Eyecandy
 Mesa 20.3|Tools fehlt
 Microsoft Teams|Messanger
 Min|Internet Browser
-Min Browser|Internet Browser fehlt komisch evt. nicht Debian oder weil Name doppelt
+Min Browser|Internet Browser
 Minecraft Bedrock|Games
 Minecraft Java|Games
 Minecraft Java MultiMC5|Games
@@ -74,7 +74,7 @@ Notepad ++|Editors
 OBS Studio|Tools
 OpenSCAD|Graphics CAD
 Pale Moon|Internet Browser
-Pale Moon Browser|Internet Browser fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pale Moon Browser|Internet Browser
 Persepolis Download Manager|Internet
 Pi Power Tools|Tools
 Pi-Apps Terminal Plugin|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
@@ -87,8 +87,8 @@ Powerline-Shell|Terminal
 PPSSPP (PSP emulator)|Emulators
 Processing IDE|Editors Programmers
 PrusaSlicer|Graphics CAD
-Puffin|Internet Neu
-Puffin Browser Demo|Internet
+Puffin|Internet Browser
+Puffin Browser Demo|Internet Browser
 Pycharm CE|Editors Programmers
 QEMU|Emulators
 Quartz|Internet Browser
@@ -115,7 +115,7 @@ Temps|Tools
 Timeshift|Tools
 tldr|Tools
 Tor|Internet Browser
-Tor Browser|Internet Browser fehlt komisch evt. nicht Debian oder weil Name doppelt
+Tor Browser|Internet Browser
 Turbowarp|Editors
 Ulauncher|Theme Launcher
 unrar|Tools fehlt
@@ -134,8 +134,8 @@ Windows Flasher|Tools
 Windows Screensavers|Diverse
 Wine (x86)|Tools
 WPS Office|Editors
-XSnow|Diverse
+XSnow|Theme
 Xtreme Download Manager|Internet Download Manager
-YouTubuddy|Download Manager
+YouTubuddy|Internet Download Manager
 Zoom|Messanger
 Zoom PWA|Messanger
