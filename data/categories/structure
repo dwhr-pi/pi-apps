@@ -1,30 +1,30 @@
 Alacritty Terminal|Tools
-All Is Well|Tools
+All Is Well|Tools System
 Amiberry|Emulators
 AndroidBuddy|Tools
 Angry IP scanner|Internet
 AnyDesk|Internet
 Arduino|Editors Programmers
 AstroMenace|Games
-Autostar|Tools
+Autostar|Tools System
 ATlauncherPI|Games fehlt
 Back to Chromium v78|Internet Browser
 Back to Chromium v86|Internet Browser
-BalenaEtcher|Tools
-BleachBit|Tools
+BalenaEtcher|Tools System
+BleachBit|Tools System
 BlockPi|Editors Programmers
-Bongo Cam|Diverse
+Bongo Cam|Tools
 Box64|Emulators
 Box86|Emulators
 Boxy SVG|Graphics
 Browsh|Internet Browser
 Chiaki|Games
 Chromium Widevine|Internet Browser
-Clam Antivirus|Tools
+Clam Antivirus|Tools System
 CloudBuddy|Internet
 Codex|Editors Programmers
 Color Emoji font|Theme
-CommanderPi|Tools
+CommanderPi|Tools System
 Conky|Theme Launcher
 Conky Rings|Theme Launcher
 Cool Retro Term|Terminal
@@ -77,11 +77,11 @@ Pale Moon|Internet Browser
 Pale Moon Browser|Internet Browser
 Persepolis Download Manager|Internet
 Pi Power Tools|Tools
-Pi-Apps Terminal Plugin|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
-Pi-Apps Terminal Plugin (bash)|Tools
-Pi-Apps Terminal Plugin (python)|Werkzeuge fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pi-Apps Terminal Plugin|Tools App Store fehlt komisch evt. nicht Debian oder weil Name doppelt
+Pi-Apps Terminal Plugin (bash)|Tools App Store
+Pi-Apps Terminal Plugin (python)|Tools App Store fehlt komisch evt. nicht Debian oder weil Name doppelt
 PiGro|Tools
-piKiss|Tools fehlt komisch evt. nicht Debian oder weil Name doppelt
+piKiss|Tools App Store
 PiSafe|Tools
 Powerline-Shell|Terminal
 PPSSPP (PSP emulator)|Emulators
@@ -97,7 +97,7 @@ Remarkable|Editors Programmers
 Scratch 2|Diverse
 Scrcpy|Tools
 Simplenote|Editors fehlt
-Snap Store|Tools
+Snap Store|Tools App Store
 Snapdrop|Tools
 Sonic Pi|Diverse
 Sonic Pi 3.2|Editors
@@ -118,21 +118,21 @@ Tor|Internet Browser
 Tor Browser|Internet Browser
 Turbowarp|Editors
 Ulauncher|Theme Launcher
-unrar|Tools fehlt
-Update Buddy|Tools
+unrar|Tools System fehlt
+Update Buddy|Tools System
 USBImager|Tools
 VeraCrypt|Tools
 Visual Studio Code|Editors Programmers
 Vivaldi|Internet Browser
 VSCodium|Editors Programmers
-WACUP (new WinAmp)|Tools
+WACUP (new WinAmp)|Tools Audio
 Web Apps|Messanger
 WeChat|Messanger
 WhatsApp|Messanger
 Windows 10 Theme|Theme
-Windows Flasher|Tools
-Windows Screensavers|Diverse
-Wine (x86)|Tools
+Windows Flasher|Tools System
+Windows Screensavers|Theme
+Wine (x86)|Emulators
 WPS Office|Editors
 XSnow|Theme
 Xtreme Download Manager|Internet Download Manager
