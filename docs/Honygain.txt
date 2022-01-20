@@ -1,0 +1,36 @@
+https://dashboard.honeygain.com/login
+
+https://hub.docker.com/r/honeygain/honeygain
+
+Official Honeygain CLI Docker image (beta)
+This is the official Honeygain CLI application wrapped into a docker image. You can run this image on any platform with Docker support (Windows, Linux, macOS and others).
+
+Onley for AMD not ARM64
+
+### Docker Pull Command
+```
+docker pull honeygain/honeygain
+```
+
+Please note that this application is currently in the beta stage and is subject to change in the future. If you encounter any problems or difficulties using this application, please contact the Honeygain team with a detailed description of the issue you are having.
+
+Prerequisites
+Follow these steps to join Honeygain network using Docker:
+
+Install Docker on your machine.
+Create Honeygain account using Honeygain dashboard or app.
+Running
+Before running the Honeygain Docker image, please read the Terms of Use carefully. Get the current copy of ToU by running:
+```
+docker run honeygain/honeygain -tou-get
+```
+You can start Honeygain container by running the following command:
+```
+docker run honeygain/honeygain -tou-accept -email ACCOUNT_EMAIL -pass ACCOUNT_PASSWORD -device DEVICE_NAME
+
+```
+Note there's a mandatory -device parameter. It is used to uniquely identify this run among other devices in your devices list. You should use a different DEVICE_NAME for every Docker container you start within the same account (no matter if you run them on the same machine with different IP addresses, or run on different physical machines). You can't run multiple instances of Honeygain CLI application with the same DEVICE_NAME at the same time.
+
+After the application is started you should see your new device running on your dashboard.
+
+Also, note that the Honeygain CLI application complies with the same usage restrictions as regular Honeygain applications (e.g. the limit of devices per IP address, network type checks and others). Breaching Honeygain's Terms of Use will lead to suspension of your account.

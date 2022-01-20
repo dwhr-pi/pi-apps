@@ -1,0 +1,37 @@
+Lutris und Wine und Steam
+https://www.youtube.com/watch?v=0506yDSgU7M
+
+https://www.youtube.com/watch?v=3E8IGy6I9Wo
+on github
+
+goxlr wohl für microphone
+
+Keylight Controller
+
+
+weather
+https://hub.balena.io/hardy_ferentschik_balena/weather
+
+balenaSound
+https://hub.balena.io/balenalabs/balenasound
+
+balena-rpiplay  - Turn a Raspberry Pi into an Airplay server using RPiPlay to enable screen mirroring on tvs, monitors and projectors.
+https://hub.balena.io/gh_rahul_thakoor/balena-rpiplay/?utm_medium=etcher&utm_source=efp&utm_campaign=balena-hub&utm_content=v1
+
+
+
+https://hub.balena.io/projects
+https://hub.balena.io/
+
+
+TTNGateway-RPi
+https://hub.balena.io/resin67/ttngateway-rpi
+Helium-Miner
+https://hub.balena.io/nebraltd/helium-miner
+Helium-Light-Hotspot
+https://hub.balena.io/nebraltd/helium-light-hotspot
+helium-dyi-hotspot-balena-pi4
+https://hub.balena.io/ronnie_smits/helium-dyi-hotspot-balena-pi4
+https://www.google.com/search?q=Helium-Miner&oq=Helium-Miner&aqs=chrome..69i57j0i30l6j69i60.1454j0j7&sourceid=chrome&ie=UTF-8
+https://www.computerbild.de/artikel/cb-Tipps-PC-Hardware-Helium-Coin-Mining-ohne-Grafikkarte-30237547.html
+

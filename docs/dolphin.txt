@@ -1,0 +1,8 @@
+Dolphin Emulator
+https://de.dolphin-emu.org
+GameCube- und Wii-Emulator
+
+
+Dolphin Dateimanager
+https://websetnet.net/de/the-best-file-manager-for-linux-ubuntu-2020/
+

