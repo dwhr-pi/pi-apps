@@ -1,3 +1,7 @@
+mk als Server
+https://www.mkdocs.org/getting-started/
+https://squidfunk.github.io/mkdocs-material/
+
 Lutris und Wine und Steam
 https://www.youtube.com/watch?v=0506yDSgU7M
 

@@ -1,0 +1,14 @@
+https://github.com/lxde/
+https://github.com/lxde/lxlauncher
+https://github.com/oahong/lxde-unofficial
+https://github.com/c0ki/lxdeapps
+
+https://github.com/masami256/backlight-applet
+
+https://github.com/techcoder20/MacOSBigSurThemeConverter
+
+https://github.com/RetroGamer74/NintendoSwitch_RootFS_Linux_ArchLinux_LXDE_PlusFeatures
+
+
+https://github.com/search?q=DietPI
+https://github.com/MichaIng/DietPi-Docs

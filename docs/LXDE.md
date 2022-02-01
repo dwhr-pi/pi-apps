@@ -1,5 +1,6 @@
 # LXDE
 https://wiki.debian.org/de/LXDE
+https://sourceforge.net/projects/lxde/files/ Source Code
 
 LXDE wurde entwickelt, um gut mit Computern am unteren Ende des Leistungsspektrums zusammenzuarbeiten, wie z.B. älteren ressourcenbeschränkten Maschinen, Netbooks der neuen Generation und anderen kleinen Computern.
 
