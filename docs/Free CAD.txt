@@ -1,0 +1,11 @@
+https://www.youtube.com/watch?v=QSu1kdZbR3o&list=PLVPBipeObwMPWGEI5im2E3nuieRj_-KWP
+
+https://www.freecadweb.org/
+
+Dokumentation
+https://wiki.freecad.org/Getting_started
+
+Install
+https://wiki.freecad.org/Installing_on_Linux
+
+sudo apt-get install freecad
