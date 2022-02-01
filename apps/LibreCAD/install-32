@@ -14,5 +14,5 @@ filename='librecad'
 
 
 # Installing the software with permissions
-sudo apt install librecad
+sudo apt install -y librecad
 
