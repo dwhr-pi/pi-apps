@@ -6,26 +6,28 @@ Angry IP scanner|Internet
 AnyDesk|Internet
 Arduino|Editors Programmers
 AstroMenace|Games
+AntiMicroX|Tools
+Audacious|Multimedia
+Audacity|Multimedia
 Autostar|Tools System
-
-ATlauncherPI|Games fehlt
-
-AntiMicroX|
-Audacious|
-Audacity|
-
+ATlauncherPI|fehlt/Games
 Back to Chromium v78|Internet Browser
 Back to Chromium v86|Internet Browser
 BalenaEtcher|Tools Imager
 BleachBit|Tools System
+BlockBench|Editors
 BlockPi|Editors Programmers
+BlueJ Java IDE|Editors
 Bongo Cam|Tools
 Box64|Emulators
 Box86|Emulators
 Boxy SVG|Graphics
 Browsh|Internet Browser
+btop++|Tools
+Caprine|Internet
 Chiaki|Games
-Chromium Widevine|Internet Browser
+Chromium|Internet/Browsers
+Chromium Widevine|Internet/Browser
 Clam Antivirus|Tools System
 CloudBuddy|Internet
 Codex|Editors Programmers
@@ -35,51 +37,77 @@ Conky|Theme Launcher
 Conky Rings|Theme Launcher
 Cool Retro Term|Terminal
 Cura|Graphics CAD
+DDnet|fehlt/Games 
+Deluge|Internet
 Descent 1|Games
 Descent 2|Games
+Deskreen|Internet
 Discord|Messanger
+Disk Usage Analyzer|Tools
 Doom 3|Games
 Downgrade Chromium|Internet Browser
 Drawing|Graphics
 Eagle CAD|Graphics CAD
 eDEX-UI|Terminal
 Email Checker|Internet
+Epiphany|Internet/Browsers
+ExaGear|fehlt/Tools
 Falkon|Internet Browser
+FF Multi Converter|Tools
+Filezilla|Internet
 Firefox Rapid Release|Internet Browser
 Flameshot|Tools Screenshot
 FreeCAD|Editors
 FreeTube|Internet Download Manager
 Geany Dark Mode|Editors
 Geekbench|Tools Benchmark
+GIMP|Editors
 Github-CLI|Terminal
 Godot|Games
 Godot Engine 3.2.4|Games
+GParted|Tools
+Guake Terminal|Tools
 Heroes 2|Diverse
 Https File Server|Diverse
+HTTrack Website Copier|Internet
+Imager|Tools
+Inkscape|Editors
 Intellij IDEA|Editors Programmers
 Interactive Brokers TW|Tools fehlt
 jGRASP IDE|Editors
-KeePassX|fehlt
+KeePassX|Tools
+Kodi|Multimedia
+Kolourpaint|Editors
 Lego Digital Designer|Diverse
-Libreoffice MS theme|Editors
 LibreCAD|Graphics CAD
+LibreOffice|Editors
+LibreOffice MS theme|Editors
 LibrePCB|Editors
 Lightpad|Theme Launcher
 LinuxCNC|Diverse
 Lokinet|Internet
 Mac OS Theme|Eyecandy
 Mesa 20.3|Tools fehlt
+Microsoft PowerShell|Tools
 Microsoft Teams|Messanger
 Min|Internet Browser
 Min Browser|Internet Browser
 Minecraft Bedrock|Games
 Minecraft Java|Games
+Minecraft Java Server|Games
 Minecraft Java MultiMC5|Games
 Minecraft Pi (Modded)|Games
 Mission Planner|Tools
+More RAM|Tools
+MuseScore2|hidden
+MuseScore|Multimedia
+Nautilus|Tools
+Nemo|Tools
+NixNote2|Editors
 Node.js|Tools
 Notepad ++|Editors
 OBS Studio|Tools
+Oomox Theme Designer|Appearance
 OpenSCAD|Graphics CAD
 Pale Moon|Internet Browser
 Pale Moon Browser|Internet Browser
@@ -90,6 +118,7 @@ Pi-Apps Terminal Plugin (bash)|Tools App Store
 Pi-Apps Terminal Plugin (python)|Tools App Store
 PiGro|Tools
 piKiss|Tools App Store
+Pinta|Editors
 PiSafe|Tools Imager
 Powerline-Shell|Terminal
 PPSSPP (PSP emulator)|Emulators
@@ -102,31 +131,42 @@ QEMU|Emulators
 Quartz|Internet Browser
 Raspi2png|Tools Screenshot
 Remarkable|Editors Programmers
-Scratch 2|Diverse
+Scratch 2|Editors
+Scratch 3|Editors
 Scrcpy|Tools
+Screenshot|Tools
+Shotwell|Editors
+SimpleScreenRecorder|Multimedia
 Simplenote|Editors fehlt
 Snap Store|Tools App Store
 Snapdrop|Tools
-Sonic Pi|Diverse
+Sonic Pi|fehlt/Multimedia
 Sonic Pi 3.2|Editors
 SpeedTest-CLI|Tools Benchmark
 StackEdit|Editors Programmers
 Steam|Games
+Steam Link|Games
 Stunt Rally|Games
 Sublime Text|Editors Programmers
+Synaptic|Tools
+SysMonTask|Tools
 Sysmon|Tools System
 TBOPlayer|Internet Download Manager
 TeamViewer Host|Internet
 Telegram|Messanger
 template|hidden
 Temps|Theme
+Tetris CLI|Games
+Thunderbird|Internet
 Timeshift|Tools System
 tldr|Terminal Tools
 Tor|Internet Browser
-Tor Browser|Internet Browser
+Tor Browser|Internet/Browsers
+Transmission|Internet
 Turbowarp|Editors
 Ulauncher|Theme Launcher
-unrar|Tools System fehlt
+unrar|fehlt/Tools System
+Unciv|Games
 Update Buddy|Tools System
 USBImager|Tools Imager
 VeraCrypt|Terminal Tools
