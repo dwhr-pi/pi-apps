@@ -1,6 +1,6 @@
 Alacritty Terminal|Terminal
 All Is Well|Tools/System
-Amiberry|Emulators
+Amiberry|Games/Emulators
 AndroidBuddy|Tools
 Angry IP scanner|Internet
 AnyDesk|Internet
@@ -19,14 +19,14 @@ BlockBench|Editors
 BlockPi|Editors/Programmers
 BlueJ Java IDE|Editors
 Bongo Cam|Tools
-Box64|Emulators
-Box86|Emulators
+Box64|Games/Emulators
+Box86|Games/Emulators
 Boxy SVG|Graphics
 Browsh|Internet/Browser
 btop++|Tools
 Caprine|Internet
 Chiaki|Games
-Chromium|Internet/Browsers
+Chromium|Internet/Browser
 Chromium Widevine|Internet/Browser
 Clam Antivirus|Tools/System
 CloudBuddy|Internet
@@ -50,7 +50,7 @@ Drawing|Graphics
 Eagle CAD|Graphics/CAD
 eDEX-UI|Terminal
 Email Checker|Internet
-Epiphany|Internet/Browsers
+Epiphany|Internet/Browser
 ExaGear|fehlt/Tools
 Falkon|Internet/Browser
 FF Multi Converter|Tools
@@ -83,7 +83,7 @@ LibreCAD|Graphics/CAD
 LibreOffice|Editors
 LibreOffice MS theme|Editors/Theme
 LibrePCB|Editors
-Lightpad|Launcher/Theme
+Lightpad|Theme/Launcher
 LinuxCNC|Diverse
 Lokinet|Internet
 Mac OS Theme|Eyecandy
@@ -107,7 +107,7 @@ NixNote2|Editors
 Node.js|Tools
 Notepad ++|Editors
 OBS Studio|Tools
-Oomox Theme Designer|Appearance
+Oomox Theme Designer|Theme/Launcher/Designer
 OpenSCAD|Graphics/CAD
 Pale Moon|Internet/Browser
 Pale Moon Browser|Internet/Browser
@@ -121,13 +121,13 @@ piKiss|Tools/App Store
 Pinta|Editors
 PiSafe|Tools/Imager
 Powerline-Shell|Terminal
-PPSSPP (PSP emulator)|Emulators
+PPSSPP (PSP emulator)|Games/Emulators
 Processing IDE|Editors/Programmers
 PrusaSlicer|Graphics/CAD
 Puffin|Internet/Browser
 Puffin Browser Demo|Internet/Browser
 Pycharm CE|Editors/Programmers
-QEMU|Emulators
+QEMU|Games/Emulators
 Quartz|Internet/Browser
 Raspi2png|Tools/Screenshot
 Remarkable|Editors/Programmers
@@ -149,7 +149,7 @@ Steam Link|Games
 Stunt Rally|Games
 Sublime Text|Editors/Programmers
 Synaptic|Tools
-SysMonTask|Tools
+SysMonTask|Tools/System
 Sysmon|Tools/System
 TBOPlayer|Internet/Download Manager
 TeamViewer Host|Internet
@@ -161,7 +161,7 @@ Thunderbird|Internet
 Timeshift|Tools/System
 tldr|Terminal Tools
 Tor|Internet/Browser
-Tor Browser|Internet/Browsers
+Tor Browser|Internet/Browser
 Transmission|Internet
 Turbowarp|Editors
 Ulauncher|Theme/Launcher
@@ -180,7 +180,7 @@ Whatsapp|Internet/Messanger
 Windows 10 Theme|Theme/Launcher
 Windows Flasher|Tools/Imager
 Windows Screensavers|Theme/Screensaver
-Wine (x86)|Emulators
+Wine (x86)|Games/Emulators
 WPS Office|Editors
 XSnow|Theme
 Xtreme Download Manager|Internet/Download Manager
