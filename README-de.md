@@ -24,6 +24,14 @@ Die original Version, funktioniert auch super auf Debian Bullseye
 wget -qO- https://raw.githubusercontent.com/Botspot/pi-apps/master/install | bash
 ```
 
+
+Oder
+```
+git clone https://github.com/dwhr-pi/pi-apps.git
+cd pi-apps
+install
+```
+
 <details>
 <summary>Manuelle installation</summary>
 	
