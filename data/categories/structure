@@ -1,66 +1,66 @@
 Alacritty Terminal|Terminal
-All Is Well|Tools System
+All Is Well|Tools/System
 Amiberry|Emulators
 AndroidBuddy|Tools
 Angry IP scanner|Internet
 AnyDesk|Internet
-Arduino|Editors Programmers
+Arduino|Editors/Programmers
 AstroMenace|Games
 AntiMicroX|Tools
 Audacious|Multimedia
 Audacity|Multimedia
-Autostar|Tools System
+Autostar|Tools/System
 ATlauncherPI|fehlt/Games
-Back to Chromium v78|Internet Browser
-Back to Chromium v86|Internet Browser
-BalenaEtcher|Tools Imager
-BleachBit|Tools System
+Back to Chromium v78|Internet/Browser
+Back to Chromium v86|Internet/Browser
+BalenaEtcher|Tools/Imager
+BleachBit|Tools/System
 BlockBench|Editors
-BlockPi|Editors Programmers
+BlockPi|Editors/Programmers
 BlueJ Java IDE|Editors
 Bongo Cam|Tools
 Box64|Emulators
 Box86|Emulators
 Boxy SVG|Graphics
-Browsh|Internet Browser
+Browsh|Internet/Browser
 btop++|Tools
 Caprine|Internet
 Chiaki|Games
 Chromium|Internet/Browsers
 Chromium Widevine|Internet/Browser
-Clam Antivirus|Tools System
+Clam Antivirus|Tools/System
 CloudBuddy|Internet
-Codex|Editors Programmers
+Codex|Editors/Programmers
 Color Emoji font|Theme
-CommanderPi|Tools System
-Conky|Theme Launcher
-Conky Rings|Theme Launcher
+CommanderPi|Tools/System
+Conky|Theme/Launcher
+Conky Rings|Theme/Launcher
 Cool Retro Term|Terminal
-Cura|Graphics CAD
+Cura|Graphics/CAD
 DDnet|fehlt/Games 
 Deluge|Internet
 Descent 1|Games
 Descent 2|Games
 Deskreen|Internet
-Discord|Messanger
+Discord|Internet/Messanger
 Disk Usage Analyzer|Tools
 Doom 3|Games
-Downgrade Chromium|Internet Browser
+Downgrade Chromium|Internet/Browser
 Drawing|Graphics
-Eagle CAD|Graphics CAD
+Eagle CAD|Graphics/CAD
 eDEX-UI|Terminal
 Email Checker|Internet
 Epiphany|Internet/Browsers
 ExaGear|fehlt/Tools
-Falkon|Internet Browser
+Falkon|Internet/Browser
 FF Multi Converter|Tools
 Filezilla|Internet
-Firefox Rapid Release|Internet Browser
-Flameshot|Tools Screenshot
+Firefox Rapid Release|Internet/Browser
+Flameshot|Tools/Screenshot
 FreeCAD|Editors
-FreeTube|Internet Download Manager
+FreeTube|Internet/Download Manager
 Geany Dark Mode|Editors
-Geekbench|Tools Benchmark
+Geekbench|Tools/Benchmark
 GIMP|Editors
 Github-CLI|Terminal
 Godot|Games
@@ -72,26 +72,26 @@ Https File Server|Diverse
 HTTrack Website Copier|Internet
 Imager|Tools
 Inkscape|Editors
-Intellij IDEA|Editors Programmers
+Intellij IDEA|Editors/Programmers
 Interactive Brokers TW|Tools fehlt
 jGRASP IDE|Editors
 KeePassX|Tools
 Kodi|Multimedia
 Kolourpaint|Editors
 Lego Digital Designer|Diverse
-LibreCAD|Graphics CAD
+LibreCAD|Graphics/CAD
 LibreOffice|Editors
-LibreOffice MS theme|Editors
+LibreOffice MS theme|Editors/Theme
 LibrePCB|Editors
-Lightpad|Theme Launcher
+Lightpad|Launcher/Theme
 LinuxCNC|Diverse
 Lokinet|Internet
 Mac OS Theme|Eyecandy
 Mesa 20.3|Tools fehlt
 Microsoft PowerShell|Tools
-Microsoft Teams|Messanger
-Min|Internet Browser
-Min Browser|Internet Browser
+Microsoft Teams|Internet/Messanger
+Min|Internet/Browser
+Min Browser|Internet/Browser
 Minecraft Bedrock|Games
 Minecraft Java|Games
 Minecraft Java Server|Games
@@ -108,83 +108,83 @@ Node.js|Tools
 Notepad ++|Editors
 OBS Studio|Tools
 Oomox Theme Designer|Appearance
-OpenSCAD|Graphics CAD
-Pale Moon|Internet Browser
-Pale Moon Browser|Internet Browser
-Persepolis Download Manager|Internet Download Manager
+OpenSCAD|Graphics/CAD
+Pale Moon|Internet/Browser
+Pale Moon Browser|Internet/Browser
+Persepolis Download Manager|Internet/Download Manager
 Pi Power Tools|Tools
-Pi-Apps Terminal Plugin|Tools App Store
-Pi-Apps Terminal Plugin (bash)|Tools App Store
-Pi-Apps Terminal Plugin (python)|Tools App Store
+Pi-Apps Terminal Plugin|Tools/App Store
+Pi-Apps Terminal Plugin (bash)|Tools/App Store
+Pi-Apps Terminal Plugin (python)|Tools/App Store
 PiGro|Tools
-piKiss|Tools App Store
+piKiss|Tools/App Store
 Pinta|Editors
-PiSafe|Tools Imager
+PiSafe|Tools/Imager
 Powerline-Shell|Terminal
 PPSSPP (PSP emulator)|Emulators
-Processing IDE|Editors Programmers
-PrusaSlicer|Graphics CAD
-Puffin|Internet Browser
-Puffin Browser Demo|Internet Browser
-Pycharm CE|Editors Programmers
+Processing IDE|Editors/Programmers
+PrusaSlicer|Graphics/CAD
+Puffin|Internet/Browser
+Puffin Browser Demo|Internet/Browser
+Pycharm CE|Editors/Programmers
 QEMU|Emulators
-Quartz|Internet Browser
-Raspi2png|Tools Screenshot
-Remarkable|Editors Programmers
+Quartz|Internet/Browser
+Raspi2png|Tools/Screenshot
+Remarkable|Editors/Programmers
 Scratch 2|Editors
 Scratch 3|Editors
 Scrcpy|Tools
 Screenshot|Tools
 Shotwell|Editors
 SimpleScreenRecorder|Multimedia
-Simplenote|Editors fehlt
-Snap Store|Tools App Store
+Simplenote|fehlt/Editors
+Snap Store|Tools/App Store
 Snapdrop|Tools
 Sonic Pi|fehlt/Multimedia
 Sonic Pi 3.2|Editors
-SpeedTest-CLI|Tools Benchmark
-StackEdit|Editors Programmers
+SpeedTest-CLI|Tools/Benchmark
+StackEdit|Editors/Programmers
 Steam|Games
 Steam Link|Games
 Stunt Rally|Games
-Sublime Text|Editors Programmers
+Sublime Text|Editors/Programmers
 Synaptic|Tools
 SysMonTask|Tools
-Sysmon|Tools System
-TBOPlayer|Internet Download Manager
+Sysmon|Tools/System
+TBOPlayer|Internet/Download Manager
 TeamViewer Host|Internet
-Telegram|Messanger
+Telegram|Internet/Messanger
 template|hidden
 Temps|Theme
 Tetris CLI|Games
 Thunderbird|Internet
-Timeshift|Tools System
+Timeshift|Tools/System
 tldr|Terminal Tools
-Tor|Internet Browser
+Tor|Internet/Browser
 Tor Browser|Internet/Browsers
 Transmission|Internet
 Turbowarp|Editors
-Ulauncher|Theme Launcher
-unrar|fehlt/Tools System
+Ulauncher|Theme/Launcher
+unrar|fehlt/Tools/System
 Unciv|Games
-Update Buddy|Tools System
-USBImager|Tools Imager
+Update Buddy|Tools/System
+USBImager|Tools/Imager
 VeraCrypt|Terminal Tools
-Visual Studio Code|Editors Programmers
-Vivaldi|Internet Browser
-VSCodium|Editors Programmers
-WACUP (new WinAmp)|Tools Audio
-Web Apps|Messanger
-Wechat|Messanger
-Whatsapp|Messanger
-Windows 10 Theme|Theme
-Windows Flasher|Tools Imager
-Windows Screensavers|Theme
+Visual Studio Code|Editors/Programmers
+Vivaldi|Internet/Browser
+VSCodium|Editors/Programmers
+WACUP (new WinAmp)|Tools/Audio
+Web Apps|Internet/Messanger
+Wechat|Internet/Messanger
+Whatsapp|Internet/Messanger
+Windows 10 Theme|Theme/Launcher
+Windows Flasher|Tools/Imager
+Windows Screensavers|Theme/Screensaver
 Wine (x86)|Emulators
 WPS Office|Editors
 XSnow|Theme
-Xtreme Download Manager|Internet Download Manager
-YouTubuddy|Internet Download Manager
-Zoom|Messanger
-Zoom PWA|Messanger
+Xtreme Download Manager|Internet/Download Manager
+YouTubuddy|Internet/Download Manager
+Zoom|Internet/Messanger
+Zoom PWA|Internet/Messanger
 
