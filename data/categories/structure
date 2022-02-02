@@ -1,4 +1,4 @@
-Alacritty Terminal|Terminal
+Alacritty Terminal|Tools/Terminal
 All Is Well|Tools/System
 Amiberry|Games/Emulators
 AndroidBuddy|Tools
@@ -35,7 +35,7 @@ Color Emoji font|Theme
 CommanderPi|Tools/System
 Conky|Theme/Launcher
 Conky Rings|Theme/Launcher
-Cool Retro Term|Terminal
+Cool Retro Term|Tools/Terminal
 Cura|Graphics/CAD
 DDnet|fehlt/Games 
 Deluge|Internet
@@ -48,7 +48,7 @@ Doom 3|Games
 Downgrade Chromium|Internet/Browser
 Drawing|Graphics
 Eagle CAD|Graphics/CAD
-eDEX-UI|Terminal
+eDEX-UI|Tools/Terminal
 Email Checker|Internet
 Epiphany|Internet/Browser
 ExaGear|fehlt/Tools
@@ -62,7 +62,7 @@ FreeTube|Internet/Download Manager
 Geany Dark Mode|Editors
 Geekbench|Tools/Benchmark
 GIMP|Editors
-Github-CLI|Terminal
+Github-CLI|Tools/Terminal
 Godot|Games
 Godot Engine 3.2.4|Games
 GParted|Tools
@@ -84,11 +84,11 @@ LibreOffice|Editors
 LibreOffice MS theme|Editors/Theme
 LibrePCB|Editors
 Lightpad|Theme/Launcher
-LinuxCNC|Diverse
+LinuxCNC|Graphics/CAD
 Lokinet|Internet
 Mac OS Theme|Eyecandy
-Mesa 20.3|Tools fehlt
-Microsoft PowerShell|Tools
+Mesa 20.3|fehlt/Tools
+Microsoft PowerShell|Tools/Terminal
 Microsoft Teams|Internet/Messanger
 Min|Internet/Browser
 Min Browser|Internet/Browser
@@ -99,14 +99,14 @@ Minecraft Java MultiMC5|Games
 Minecraft Pi (Modded)|Games
 Mission Planner|Tools
 More RAM|Tools
-MuseScore2|hidden
+MuseScore2|fehlt/Multimedia/hidden
 MuseScore|Multimedia
 Nautilus|Tools
 Nemo|Tools
 NixNote2|Editors
 Node.js|Tools
 Notepad ++|Editors
-OBS Studio|Tools
+OBS Studio|Multimedia
 Oomox Theme Designer|Theme/Launcher/Designer
 OpenSCAD|Graphics/CAD
 Pale Moon|Internet/Browser
@@ -120,7 +120,7 @@ PiGro|Tools
 piKiss|Tools/App Store
 Pinta|Editors
 PiSafe|Tools/Imager
-Powerline-Shell|Terminal
+Powerline-Shell|Tools/Terminal
 PPSSPP (PSP emulator)|Games/Emulators
 Processing IDE|Editors/Programmers
 PrusaSlicer|Graphics/CAD
@@ -159,7 +159,7 @@ Temps|Theme
 Tetris CLI|Games
 Thunderbird|Internet
 Timeshift|Tools/System
-tldr|Terminal Tools
+tldr|Tools/Terminal
 Tor|Internet/Browser
 Tor Browser|Internet/Browser
 Transmission|Internet
@@ -169,7 +169,7 @@ unrar|fehlt/Tools/System
 Unciv|Games
 Update Buddy|Tools/System
 USBImager|Tools/Imager
-VeraCrypt|Terminal Tools
+VeraCrypt|Tools/Festplatte/
 Visual Studio Code|Editors/Programmers
 Vivaldi|Internet/Browser
 VSCodium|Editors/Programmers
