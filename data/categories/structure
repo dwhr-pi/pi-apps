@@ -1,9 +1,9 @@
 Alacritty Terminal|Tools/Terminal
 All Is Well|Tools/System
-Amiberry|Games/Emulators
+Amiberry|Emulators/Games
 AndroidBuddy|Tools
 Angry IP scanner|Internet
-AnyDesk|Internet
+AnyDesk|Desktop/Remote Desktop
 Arduino|Editors/Programmers
 AstroMenace|Games
 AntiMicroX|Tools
@@ -19,8 +19,8 @@ BlockBench|Editors
 BlockPi|Editors/Programmers
 BlueJ Java IDE|Editors
 Bongo Cam|Tools
-Box64|Games/Emulators
-Box86|Games/Emulators
+Box64|Emulators/Games
+Box86|Emulators/Games
 Boxy SVG|Graphics
 Browsh|Internet/Browser
 btop++|Tools
@@ -33,15 +33,15 @@ CloudBuddy|Internet
 Codex|Editors/Programmers
 Color Emoji font|Theme
 CommanderPi|Tools/System
-Conky|Theme/Launcher
-Conky Rings|Theme/Launcher
+Conky|Desktop/Theme/Launcher
+Conky Rings|Desktop/Theme/Launcher
 Cool Retro Term|Tools/Terminal
 Cura|Graphics/CAD
 DDnet|fehlt/Games 
 Deluge|Internet
 Descent 1|Games
 Descent 2|Games
-Deskreen|Internet
+Deskreen|Desktop/Remote Desktop
 Discord|Internet/Messanger
 Disk Usage Analyzer|Tools
 Doom 3|Games
@@ -56,15 +56,14 @@ Falkon|Internet/Browser
 FF Multi Converter|Tools/Audio
 Filezilla|Internet
 Firefox Rapid Release|Internet/Browser
-Flameshot|Tools/Screenshot
-FreeCAD|Editors
+Flameshot|Desktop/Screenshot
+FreeCAD|Graphics/CAD
 FreeTube|Internet/Download Manager
 Geany Dark Mode|Editors
 Geekbench|Tools/Benchmark
-GIMP|Editors
+GIMP|Graphics/Editors
 Github-CLI|Tools/Terminal
 Godot|Games
-Godot Engine 3.2.4|Games
 GParted|Tools
 Guake Terminal|Tools
 Heroes 2|Diverse
@@ -73,9 +72,9 @@ HTTrack Website Copier|Internet
 Imager|Tools
 Inkscape|Editors
 Intellij IDEA|Editors/Programmers
-Interactive Brokers TW|Tools fehlt
+Interactive Brokers TW|fehlt/Tools
 jGRASP IDE|Editors
-KeePassX|Tools
+KeePassX|Internet
 Kodi|Multimedia
 Kolourpaint|Editors
 Lego Digital Designer|Diverse
@@ -83,10 +82,10 @@ LibreCAD|Graphics/CAD
 LibreOffice|Editors
 LibreOffice MS theme|Editors/Theme
 LibrePCB|Editors
-Lightpad|Theme/Launcher
+Lightpad|Desktop/Theme/Launcher
 LinuxCNC|Graphics/CAD
 Lokinet|Internet
-Mac OS Theme|Eyecandy
+Mac OS Theme|Desktop/Theme/Launcher
 Mesa 20.3|fehlt/Tools
 Microsoft PowerShell|Tools/Terminal
 Microsoft Teams|Internet/Messanger
@@ -97,7 +96,7 @@ Minecraft Java|Games
 Minecraft Java Server|Games
 Minecraft Java MultiMC5|Games
 Minecraft Pi (Modded)|Games
-Mission Planner|Tools
+Mission Planner|Robotics
 More RAM|Tools
 MuseScore2|fehlt/Multimedia/hidden
 MuseScore|Multimedia
@@ -107,7 +106,7 @@ NixNote2|Editors
 Node.js|Tools
 Notepad ++|Editors
 OBS Studio|Multimedia
-Oomox Theme Designer|Theme/Launcher/Designer
+Oomox Theme Designer|Desktop/Theme/Launcher/Designer
 OpenSCAD|Graphics/CAD
 Pale Moon|Internet/Browser
 Pale Moon Browser|Internet/Browser
@@ -121,22 +120,22 @@ piKiss|Tools/App Store
 Pinta|Editors
 PiSafe|Tools/Imager
 Powerline-Shell|Tools/Terminal
-PPSSPP (PSP emulator)|Games/Emulators
+PPSSPP (PSP emulator)|Emulators/Games
 Processing IDE|Editors/Programmers
 PrusaSlicer|Graphics/CAD
 Puffin|Internet/Browser
 Puffin Browser Demo|Internet/Browser
 Pycharm CE|Editors/Programmers
-QEMU|Games/Emulators
+QEMU|Emulators/Virtualizer
 Quartz|Internet/Browser
-Raspi2png|Tools/Screenshot
+Raspi2png|Desktop/Screenshot
 Remarkable|Editors/Programmers
 Scratch 2|Editors
 Scratch 3|Editors
-Scrcpy|Tools
-Screenshot|Tools
+Scrcpy|Desktop/Remote Desktop
+Screenshot|Desktop/Screenshot
 Shotwell|Editors
-SimpleScreenRecorder|Multimedia
+SimpleScreenRecorder|Desktop/Screenshot
 Simplenote|fehlt/Editors
 Snap Store|Tools/App Store
 Snapdrop|Tools
@@ -144,15 +143,15 @@ Sonic Pi|fehlt/Multimedia
 Sonic Pi 3.2|Editors
 SpeedTest-CLI|Tools/Benchmark
 StackEdit|Editors/Programmers
-Steam|Games
-Steam Link|Games
+Steam|Emulators/Games
+Steam Link|Emulators/Games
 Stunt Rally|Games
 Sublime Text|Editors/Programmers
 Synaptic|Tools
 SysMonTask|Tools/System
 Sysmon|Tools/System
 TBOPlayer|Internet/Download Manager
-TeamViewer Host|Internet
+TeamViewer Host|Desktop/Remote Desktop
 Telegram|Internet/Messanger
 template|hidden
 Temps|Theme
@@ -164,7 +163,7 @@ Tor|Internet/Browser
 Tor Browser|Internet/Browser
 Transmission|Internet
 Turbowarp|Editors
-Ulauncher|Theme/Launcher
+Ulauncher|Desktop/Theme/Launcher
 unrar|fehlt/Tools/System
 Unciv|Games
 Update Buddy|Tools/System
@@ -177,10 +176,10 @@ WACUP (new WinAmp)|Tools/Audio
 Web Apps|Internet/Messanger
 Wechat|Internet/Messanger
 Whatsapp|Internet/Messanger
-Windows 10 Theme|Theme/Launcher
+Windows 10 Theme|Desktop/Theme/Launcher
 Windows Flasher|Tools/Imager
-Windows Screensavers|Theme/Screensaver
-Wine (x86)|Games/Emulators
+Windows Screensavers|Desktop/Screensaver
+Wine (x86)|Emulators/Games
 WPS Office|Editors
 XSnow|Theme
 Xtreme Download Manager|Internet/Download Manager

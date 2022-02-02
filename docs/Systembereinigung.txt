@@ -1,0 +1,14 @@
+sudo apt-get purge
+sudo apt autoremove
+
+
+sudo apt-get -q update
+sudo apt update
+sudo apt upgrade -y
+sudo apt dist-upgrade
+
+dietpi-update
+dietpi-upgrade -y
+
+
+apt-secure(8)
