@@ -282,8 +282,8 @@ sudo arduino-1.8.13/uninstall.sh
 rm -rf arduino-1.8.13
 ```
 </details>
-149 / 5.000
-Übersetzungsergebnisse
+
+
 ## Verzeichnisbaum
   - `~/pi-apps/` Dies ist der Hauptordner, der alles enthält. In allen Skripten wird es als `${DIRECTORY}`-Variable dargestellt. 
   - `CHANGELOG.md` [Diese Datei](https://github.com/Botspot/pi-apps/blob/master/CHANGELOG.md) ist eine schriftliche Historie für alle wichtigen Ereignisse für Pi-Apps, einschließlich Daten für wann Jede App wurde hinzugefügt. Es lohnt sich zu lesen! :)
