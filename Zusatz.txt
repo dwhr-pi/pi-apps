@@ -1,0 +1,6 @@
+sudo apt-get install freetype2-doc libtool-doc liblzma-doc libx11-doc libxcb-doc libxext-doc bzip2-doc libpng-tools
+
+  
+  
+  
+

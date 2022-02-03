@@ -1,0 +1,52 @@
+Nicht für Root-User
+https://stackoverflow.com/questions/33266430/how-to-install-imapclient
+
+
+https://github.com/mjs/imapclient
+https://imapclient.readthedocs.io/en/2.2.0/
+```
+git clone https://github.com/mjs/imapclient.git
+```
+
+```
+sudo pip install imapclient -e /root/imapclient
+```
+
+
+```
+sudo /usr/bin/python3 -m pip install --upgrade pip
+```
+
+Virtual Environments and Packages
+https://docs.python.org/3/tutorial/venv.html
+
+python3 -m venv tutorial-env
+source tutorial-env/bin/activate
+
+
+
+
+
+
+
+
+
+
+```
+sudo apt-get install -y imap-client s-nail 14.9.22-1
+sudo apt-get install -y s-nail
+sudo apt-get install -y default-mta 
+exim4-doc-html | exim4-doc-info eximon4 spf-tools-perl swaks
+sudo apt-get install -y mailx
+sudo apt-get install -y mailutils
+
+
+sudo apt-get install -y mail-transport-agent
+
+```
+
+```
+sudo apt-get purge imap-client
+```
+
+
