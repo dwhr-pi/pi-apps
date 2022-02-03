@@ -1,3 +1,0 @@
-#!/bin/bash
-ver='1.1.1'
-sudo apt-get install https://github.com/Crilum/update/releases/download/v${ver}/update_${ver}_all.deb || exit 1

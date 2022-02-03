@@ -1,0 +1,3 @@
+#!/bin/bash
+ver='1.1.1'
+install_packages https://github.com/Crilum/update/releases/download/v${ver}/update_${ver}_all.deb || exit 1
