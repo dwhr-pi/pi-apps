@@ -92,7 +92,7 @@ Verwenden Sie das Hauptfenster, um eine App-Kategorie auszuwählen, die Sie anze
 - Pi-Apps **Einstellungen** können durch Aufrufen von Menü -> Einstellungen -> Pi-Apps-Einstellungen konfiguriert werden.
 ![Einstellungen](https://github.com/Botspot/pi-apps/blob/master/icons/screenshots/settings.png?raw=true)
 
-## Machen
+## To-do - noch zu Machen
 
 - [X] Erstellen Sie ein **App-Erstellungssystem**. (abgeschlossen mit dem Skript `createapp`)
 - [X] Pi-Apps zu **Twister OS** hinzufügen. (abgeschlossen am 02.11.2020 über den Patch Twister 1.8.5.)
@@ -107,7 +107,7 @@ Verwenden Sie das Hauptfenster, um eine App-Kategorie auszuwählen, die Sie anze
 
 - Jede „App“ besteht einfach aus einem kleinen „Installations“-Skript, einem „Deinstallations“-Skript, zwei Symbolgrößen und zwei Textdateien, die die Beschreibung und eine Website-URL enthalten.
   - Jede App wird in einem eigenen separaten Verzeichnis gespeichert. `~/pi-apps/apps/` enthält all diese App-Verzeichnisse. Die Zoom-App würde sich beispielsweise unter `~/pi-apps/apps/Zoom/` befinden.
-  - Da jeder App-Ordner in sich geschlossen ist, ist es wirklich einfach, Ihre eigenen Apps zu „packen“: Legen Sie den Ordner einfach in eine ZIP-Datei und senden Sie ihn an Freunde. (oder laden Sie es als [neue Ausgabe] hoch (https://github.com/Botspot/pi-apps/issues/new), damit Ihre App zu Pi-Apps hinzugefügt werden kann)
+  - Da jeder App-Ordner in sich geschlossen ist, ist es wirklich einfach, Ihre eigenen Apps zu „packen“: Legen Sie den Ordner einfach in eine ZIP-Datei und senden Sie ihn an Freunde. (oder laden Sie es als [neue Ausgabe](https://github.com/Botspot/pi-apps/issues/new) hoch, damit Ihre App zu Pi-Apps hinzugefügt werden kann) 
   - Wenn Sie auf Installieren klicken, wird das Installationsskript der ausgewählten App ausgeführt. (Oder in manchen Fällen wird das Skript „install-32“ oder „install-64“ ausgeführt.)
   - Wenn Sie auf Deinstallieren klicken, wird das Deinstallationsskript der ausgewählten App ausgeführt.
   
@@ -376,6 +376,6 @@ Code einbetten:
  - Wie kann ich helfen?
 > - Es ist immer schön, in Foren und Kommentaren ein nettes Wort zu Pi-Apps zu hinterlassen. Zusätzlich dazu, dass Sie anderen helfen, diese nützliche Software zu finden, werden Sie möglicherweise einfach in die [Hall of Fame](https://github.com/Botspot/pi-apps#what-do-others-say-about-pi-apps )!
 > - Sie können [spenden](https://paypal.me/josephmarchand), wenn Sie möchten. Das Geld geht an mich (abzüglich der Paypal-Gebühren) und unterstützt die zukünftige Open-Source-Entwicklung. Ein Teil des Geldes fließt in die Platzierung von [Prämien](https://github.com/ptitSeb/box86/issues/296) für Apps, die ich gerne von jemand anderem fertig gestellt sehen möchte, der über Fähigkeiten/Zeit verfügt, die ich nicht habe verfügen über.
-> - Sie können die [Liste der App-Anfragen] (https://github.com/Botspot/pi-apps/issues) durchsehen und dabei helfen, die Skripte dafür zu erstellen.
+> - Sie können die [Liste der App-Anfragen](https://github.com/Botspot/pi-apps/issues) durchsehen und dabei helfen, die Skripte dafür zu erstellen.
 > - Wenn Sie jemanden sehen, der sich auf Youtube, Reddit oder Facebook über eine kaputte App beschwert, ermutigen Sie ihn bitte, dem [Pi-Apps Discord](https://discord.gg/RXSTvaUvuu) beizutreten oder [ein Problem zu öffnen]( https://github.com/Botspot/pi-apps/issues/new), um das Problem zu lösen. (Ich bin nicht oft auf diesen Seiten.)
 > - Sie könnten helfen, Probleme zu beheben/diagnostizieren, die andere haben.
