@@ -1,0 +1,8 @@
+UFW is the Uncomplicated Firewall for Linux
+
+Standardmässig ist Ihr System ungeschützt! Um den Server zu schützen, installieren Sie umgehend nach der Bereitstellung des Servers eine Firewall und konfigurieren Sie diese.
+
+How to run: Menu -> Other -> see descripon.md or website
+In Terminal: see descripon.md or website
+
+UFW is software that runs on Linux, on most standard PCs.

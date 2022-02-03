@@ -18,7 +18,7 @@ sudo pip3 install imapclient || error "Failed to install imapclient!"
 
 output="$(yad --form --center --width=400 --separator='\n' \
   --title="Email Checker Settings" --window-icon="$(dirname "$0")/icon-64.png" \
-  --field='IMAP Server:' 'Web.de:  imap.web.de Outlook: outlook.office365.com  Gmail: imap.gmail.com' \
+  --field='IMAP Server:' 'Outlook: outlook.office365.com  Gmail: imap.gmail.com' \
   --field='Email:' 'user@example.com' \
   --field='Password::H' '' \
   --field='Folder:' 'Inbox' \
