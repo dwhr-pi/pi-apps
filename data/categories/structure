@@ -3,7 +3,7 @@ All Is Well|Tools/System
 Amiberry|Emulators/Games
 AndroidBuddy|Tools
 Angry IP scanner|Internet
-AnyDesk|Desktop/Remote Desktop
+AnyDesk|Desktop/Remote/Desktop
 Arduino|Editors/Programmers
 AstroMenace|Games
 AntiMicroX|Tools
@@ -29,6 +29,7 @@ Chiaki|Games
 Chromium|Internet/Browser
 Chromium Widevine|Internet/Browser
 Clam Antivirus|Tools/System
+CLI Update Tool|Tools/System
 CloudBuddy|Internet
 Codex|Editors/Programmers
 Color Emoji font|Theme
@@ -41,7 +42,7 @@ DDnet|fehlt/Games
 Deluge|Internet
 Descent 1|Games
 Descent 2|Games
-Deskreen|Desktop/Remote Desktop
+Deskreen|Desktop/Remote/Desktop
 Discord|Internet/Messanger
 Disk Usage Analyzer|Tools
 Doom 3|Games
@@ -132,7 +133,7 @@ Raspi2png|Desktop/Screenshot
 Remarkable|Editors/Programmers
 Scratch 2|Editors
 Scratch 3|Editors
-Scrcpy|Desktop/Remote Desktop
+Scrcpy|Desktop/Remote/Desktop
 Screenshot|Desktop/Screenshot
 Shotwell|Editors
 SimpleScreenRecorder|Desktop/Screenshot
@@ -151,7 +152,7 @@ Synaptic|Tools
 SysMonTask|Tools/System
 Sysmon|Tools/System
 TBOPlayer|Internet/Download Manager
-TeamViewer Host|Desktop/Remote Desktop
+TeamViewer Host|Desktop/Remote/Desktop
 Telegram|Internet/Messanger
 template|hidden
 Temps|Theme

@@ -1,0 +1,6 @@
+update is a small but mighty script that updates apps/packages/dependencies from Apt, Pi-Apps, Flatpak, the Snap Store, Homebrew, pacman, and NPM.
+
+Usage: update [args]
+Example: update pi-apps
+
+To see all options, run `update help`.
