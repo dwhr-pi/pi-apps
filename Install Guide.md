@@ -1,6 +1,7 @@
+## Install deb file
 <details>
 <summary>
-## Install deb file
+Hier werden verschiedene Arten der deb-Datei Installationen vorgegeben und beschrieben. 
 </summary>
 
 
