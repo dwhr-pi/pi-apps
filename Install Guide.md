@@ -72,7 +72,7 @@ function error {
 purge_packages || exit 1
 ```
 
-Dies funktioniert
+Dies funktioniert.
 ```
 #!/bin/bash
 
