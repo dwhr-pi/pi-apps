@@ -22,6 +22,7 @@ sudo mkdir -p /usr/local/share/scrcpy
 sudo cp -af $HOME/scrcpy/scrcpy-server /usr/local/share/scrcpy/scrcpy-server
 #END OF SCRCPY
 
+#Droidbuddy
 rm -rf ~/droidbuddy
 git clone https://gitlab.com/gazlene/droidbuddy.git || error 'Could not clone AndroidBuddy repo!'
 
@@ -36,3 +37,4 @@ Type=Application
 Encoding=UTF-8
 Terminal=false
 Categories=Utility;" > ~/.local/share/applications/androidbuddy.desktop
+#END OF Droidbuddy

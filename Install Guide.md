@@ -4,7 +4,7 @@
 Hier werden verschiedene Arten der deb-Datei Installationen vorgegeben und beschrieben. 
 </summary>
 
-
+Install: 
 ```
 ```
 
@@ -40,7 +40,16 @@ sudo apt install -y --fix-broken ~/${filename}.deb || error "Failed to install i
 
 Uninstall: 
 ```
+#!/bin/bash
 
+DIRECTORY="$(dirname "$(dirname "$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )")")"
+
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
+sudo apt purge -y anydesk
 ```
 
 Oder diese Methode:
@@ -91,6 +100,23 @@ wget https://github.com/angryip/ipscan/releases/download/3.7.6/ipscan_3.7.6_all.
 sudo apt --fix-broken -y install ~/ipscan_3.7.6_all.deb
 rm ~/ipscan_3.7.6_all.deb
 ```
+
+Uninstall
+```
+#!/bin/bash
+
+DIRECTORY="$(dirname "$(dirname "$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )")")"
+
+function error {
+  echo -e "\\e[91m$1\\e[39m"
+  exit 1
+}
+
+sudo apt purge -y ipscan
+
+#if your app installs any packages, keep this command here so those packages will be removed.
+"${DIRECTORY}/purge-installed" "$(dirname "$0")" || exit 1
+```
 </details>
 
 
@@ -98,8 +124,11 @@ rm ~/ipscan_3.7.6_all.deb
 
 
 
-
 ## Github
+<details>
+<summary>Insallation mit Github
+</summary>
+
 Dies funktioniert.
 ```
 #!/bin/bash
@@ -138,10 +167,15 @@ sudo rm -r ~/All-is-well
 sed -i '/alias aiw=.*All-is-well.*/d' ~/.bashrc
 exit 0
 ```
-
+</details>
 
 
 ## tar-gz install
+<details>
+<summary>Tar Installation mit tar-gz
+</summary>
+
+Install tar-gz:
 ```
 #!/bin/bash
 
@@ -167,6 +201,7 @@ sudo mkdir -p /usr/local/share/scrcpy
 sudo cp -af $HOME/scrcpy/scrcpy-server /usr/local/share/scrcpy/scrcpy-server
 #END OF SCRCPY
 
+#Droidbuddy
 rm -rf ~/droidbuddy
 git clone https://gitlab.com/gazlene/droidbuddy.git || error 'Could not clone AndroidBuddy repo!'
 
@@ -199,3 +234,4 @@ rm -rf ~/droidbuddy ~/scrcpy ~/.local/share/applications/scrcpy.desktop ~/.local
 sudo rm -rf /usr/local/share/scrcpy 2>/dev/null
 exit 0
 ```
+</details>
