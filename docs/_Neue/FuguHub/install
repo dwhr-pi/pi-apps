@@ -1,0 +1,3 @@
+wget FuguHub.com/install/FuguHub.linux.install;chmod +x FuguHub.linux.install;sudo ./FuguHub.linux.install
+
+pushd /tmp/;rm -f install.sh;wget FuguHub.com/releases/raspberrypi/install.sh;chmod +x install.sh;sudo ./install.sh;popd

@@ -1,0 +1,7 @@
+https://www.pcwelt.de/ratgeber/Der-Raspberry-Pi-fuer-Videokonferenzen-so-klappt-s-11139827.html
+
+sudo apt install fswebcam
+
+fswebcam image.jpg
+
+sudo apt purge fswebcam
