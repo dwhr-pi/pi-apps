@@ -1,0 +1,63 @@
+Installation for Debian and Ubuntu
+Follow these steps in order to install OpenVPN 3 Client on Linux for Debian and Ubuntu:
+
+Open the Terminal by pressing ctrl + alt + T
+
+Type the following command into the Terminal: sudo apt install apt-transport-https. This is done to ensure that your apt supports the https transport. Enter the root password as prompted
+
+Type the following command into the Terminal: sudo wget https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub. This will install the OpenVPN repository key used by the OpenVPN 3 Linux packages
+
+Type the following command into the Terminal: sudo apt-key add openvpn-repo-pkg-key.pub
+
+Type the following command into the Terminal: sudo wget -O /etc/apt/sources.list.d/openvpn3.list https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-$DISTRO.list. This will install the proper repository. Replace $DISTRO with the release name depending on your Debian/Ubuntu distribution (the table of release names for each distribution can be found below). In this case, focal is chosen since Ubuntu 20.04 is used
+
+Type the following command into the Terminal: sudo apt update
+
+Type the following command into the Terminal: sudo apt install openvpn3. This will finally install the OpenVPN 3 package
+
+#Using .ovpn Profile
+Please note that by this point you should have downloaded a .ovpn profile to your machine.
+
+#Mandatory Commands
+In order to start a one-shot configuration profile, type the following command into the Terminal: openvpn3 session-start --config ${MY_CONFIGURATION_FILE}. Important: a "one-shot configuration profile" means that the configuration file is parsed, loaded, and deleted from the configuration manager as soon as the VPN session has been attempted started. No configuration file is available for re-use after this approach. This is achieved by giving the configuration file to the openvpn3 session-start command directly.
+
+In order to import a configuration file for re-use and start a VPN session, type the following command into the Terminal: openvpn3 config-import --config ${MY_CONFIGURATION_FILE}. Note: using this approach, an imported configuration file can be used several times, and access to the configuration file itself is not needed to start VPN tunnels. By default, configuration profiles imported are only available to the user who imported the configuration file. But OpenVPN 3 Linux also provides an Access Control List feature via openvpn3 config-acl to grant access to specific or all users on the system. Important: this loads the configuration profile and stores it in memory-only. That means, if the system is rebooted, the configuration profile is not preserved. If the –persistent argument is added to the command line above, the configuration profile will be saved to disk in a directory only accessible by the OpenVPN user. Whenever the Configuration Manager is started, configuration files imported with –persistent will be automatically loaded as well.
+
+In order to start a new VPN session from an imported configuration profile, run the following command: openvpn3 session-start --config ${CONFIGURATION_PROFILE_NAME}. Note: When a configuration profile is available via openvpn3 configs-list, it can easily be started via openvpn3 session-start using the configuration profile name (typically the filename used during the import)
+
+
+#Optional Commands
+To list all available configuration profiles, run this command: openvpn3 configs-list. Important: a configuration file typically contains generic options to be able to connect to a specific server, regardless of the device itself. OpenVPN 3 Linux also supports setting more host-specific settings on a configuration profile as well. This is handled via the `openvpn3 config-manage` interface. Any settings here will also be preserved across boots if the configuration profile was imported with the --persistent argument.
+Note that it is possible to use the D-Bus path to the configuration profile: openvpn3 session-start --config-path /net/openvpn/v3/configuration/.... Note: in either of these cases is it necessary to have access to the configuration profile on disk. As long as configuration profiles are available via openvpn3 configs-list, all needed to start a VPN session should be present.
+
+Managing a Running Session
+Once a VPN session has started, it should be seen in the session list: openvpn3 sessions-list
+Using the openvpn3 session-manage there are a few things which can be done, but most typically it is the –disconnect or –restart alternatives which are most commonly used. openvpn3 session-manage --config ${CONFIGURATION_PROFILE_NAME} --restart. This disconnects and re-connects to the server again, re-establishing the connection. The ${CONFIGURATION_PROFILE_NAME} is the configuration name as displayed in openvpn3 sessions-list
+It is also possible to use the D-Bus path to the session as well: openvpn3 session-manage --session-path /net/openvpn/v3/sessions/..... --disconnect. This command above will disconnect a running session. Once this operation has completed, it will be removed from the openvpn3 sessions-list overview. Important: you will be able to start a new session with this or another OpenVPN profile only after you have disconnected from the current session using the command in this step
+It is also possible to retrieve real-time tunnel statistics from running sessions: openvpn3 session-stats --config ${CONFIGURATION_PROFILE_NAME} or openvpn3 session-stats --session-path /net/openvpn/v3/sessions/...
+And to retrieve real-time log events as they occur, run the following command: openvpn3 log --config ${CONFIGURATION_PROFILE_NAME}. This might be quite silent, as it does not provide any log events from the past. Issue an openvpn3 session-manage –restart from a different terminal, and log events will occur. You may want to boost the log-level with –log-level 6. Valid log levels are from 0 to 6, where 6 is the most verbose. Note: VPN sessions are also owned by the user which started it. But the Session Manager also provides its own Access Control List feature via openvpn3 session-acl
+
+Changing the OpenVPN Profile of an Autoloading VPN Session
+Please note that every time you start a session, it will load automatically on the system start-up. In order to change the profile of an OpenVPN Session that is autoloaded, follow the steps below:
+
+Run the command: sudo openvpn3 sessions-list. It will show information about your active session. Check the value of Path parameter
+Run the command: sudo openvpn3 session-manage --session-path YOUR_PATH --disconnect, where YOUR_PATH is the value of Path parameter from Step 1
+Run the command: sudo openvpn3 sessions-list. You shouldn’t see any active sessions
+Run the command: sudo openvpn3 configs-list. It will show information about your active configurations. Check the name assigned to your active config. In this case, this is OpenVPN Cloud
+Run the command: sudo openvpn3 config-remove --config "YOUR_CONFIG_NAME", where YOUR_CONFIG_NAME is the name of the configuration file from Step 4. You will be asked to confirm the removal of the configuration. Type YES (in uppercase) to confirm
+Run the command: sudo openvpn3 configs-list. You shouldn’t see any active configurations
+Run the command: sudo nano /etc/openvpn3/autoload/connector.conf. This is the profile that will be replced. Notice that it uses the eu-central region
+Press ctrl + End, then hold ctrl + shift + ↑ until the whole file is highlighted, and finally press ctrl + K
+Open the OpenVPN profile you wish to use instead of the existing one. Press ctrl + A and then ctrl + C. Notice that it uses the ca-east region
+The go back to the Terminal, and press the right mouse button and choose Paste. Notice the difference between the old and the new profile
+Once you’ve replaced the profile, press ctrl + X and confirm changes by typing y and pressing Enter
+You can run cat /etc/openvpn3/autoload/connector.conf to check the changes are saved
+Run the command: sudo openvpn3 config-import --config /etc/openvpn3/autoload/connector.conf --name "OpenVPN Cloud"
+Run the command: sudo openvpn3 session-start --config "OpenVPN Cloud"
+Run the command: sudo openvpn3 sessions-list. It will show that a new session is active and connected to the ca-east region, that of the new profile
+Restart the computer and check if the autostart profile has indeed been changed. Just run the sudo openvpn3 sessions-list command once again. Indeed, the autoload is now set for the new profile!
+
+
+
+https://openvpn.net/cloud-docs/openvpn-3-client-for-linux/
+

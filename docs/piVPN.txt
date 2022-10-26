@@ -1,0 +1,31 @@
+https://raw.githubusercontent.com/pivpn/pivpn/
+
+https://github.com/pivpn/pivpn
+
+pivpn.io
+
+https://docs.pivpn.io/openvpn/
+
+#Connecting to OpenVPN
+
+##Windows
+Download the OpenVPN GUI, install it, and place the profile in the 'config' folder of your OpenVPN directory, i.e., in 'C:\Program Files\OpenVPN\config'. After importing, connect to the VPN server on Windows by running the OpenVPN GUI with administrator permissions, right-clicking on the icon in the system tray, and clicking 'Connect'.
+
+
+##Linux
+Install OpenVPN using your package manager (APT in this example). Now, as root user, create the /etc/openvpn/client folder and prevent anyone but root to enter it (you only need to do this the first time):
+
+'''
+apt install openvpn
+mkdir -p /etc/openvpn/client
+chown root:root /etc/openvpn/client
+chmod 700 /etc/openvpn/client
+Move the config and connect (input the pass phrase if you set one):
+'''
+
+'''
+mv whatever.ovpn /etc/openvpn/client/
+openvpn /etc/openvpn/client/whatever.ovpn
+'''
+
+Press CTRL-C to disconnect.

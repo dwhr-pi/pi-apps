@@ -1,0 +1,11 @@
+sudo apt-get install libgtk-4-bin libgtk-4-common libgtk-4-dev libgtk-4-doc
+
+http://ftp.de.debian.org/debian/pool/main/liba/libadwaita-1/libadwaita-1-0_1.0.2-2_arm64.deb
+sudo apt-get install /root/Downloads/libadwaita-1-0_1.0.2-2_arm64.deb
+
+sudo apt-get install libgtk-4-1
+
+sudo apt-get install libgtk-4-1 ds1-4
+
+
+sudo apt-get install libgtk-4-dev gtk-4-examples geany

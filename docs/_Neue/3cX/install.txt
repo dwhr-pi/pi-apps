@@ -1,0 +1,1 @@
+wget https://downloads-global.3cx.com/downloads/misc/d10pi.zip; sudo bash d10pi.zip
